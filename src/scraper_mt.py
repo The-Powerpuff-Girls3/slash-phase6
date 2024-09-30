@@ -57,7 +57,10 @@ class search(Thread):
         print(len(results))
         for res in results:
             title = res.select(self.config['title_indicator'])
-            price = res.select(self.config['price_indicator'])
+            # price = res.select(self.config['price_indicator'])
+            price_div = res.find('div', {'data-automation-id': 'product-price'}).find('span', {'class': 'w_iUH7'})
+            price_parts = [span.get_text(strip=True) for span in price_div if span.get_text(strip=True)][0]
+            price = price_parts.split()[-1]
             link = res.select(self.config['link_indicator'])
             img_link = res.select(self.config['img_indicator'])
 

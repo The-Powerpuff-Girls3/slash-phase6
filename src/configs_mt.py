@@ -23,7 +23,8 @@ WALMART = {
         'data-item-id': True
     },
     'title_indicator': 'span.lh-title',
-    'price_indicator': 'div.lh-copy',
+    # 'price_indicator': 'div.lh-copy',
+    'price_indicator': {'data-automation-id': 'product-price'},
     'link_indicator': 'a',
     'rating_indicator': 'div.flex.items-center.mt2 span.w_iUH7',
     'img_indicator': 'div.relative.overflow-hidden img'
