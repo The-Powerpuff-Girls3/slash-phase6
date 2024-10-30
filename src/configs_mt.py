@@ -70,7 +70,7 @@ BESTBUY = {
 
 
 # individual scrapers
-class _scrape_target(Thread):
+class scrape_target(Thread):
     def __init__(self, query):
         self.result = {}
         self.query = query
@@ -117,7 +117,6 @@ class _scrape_target(Thread):
             'Cache-Control': 'no-cache'
         }
         data = requests.get(api_url, params=params, headers=headers).json()
-        breakpoint()
         items = []
         if data["data"]:
             for p in data['data']['search']['products']:
@@ -134,60 +133,6 @@ class _scrape_target(Thread):
                 items.append(item)
 
         self.result = items
-
-class scrape_target(Thread):
-    def __init__(self, query):
-        self.result = []
-        self.query = query
-        super(scrape_target, self).__init__()
-
-    def run(self):
-        """Scrape Target's website for data"""
-        search_url = f"https://www.target.com/s?searchTerm={self.query}"
-        
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
-            'Accept-Encoding': 'gzip, deflate',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-            'DNT': '1',
-            'Connection': 'keep-alive',
-            'Upgrade-Insecure-Requests': '1',
-            'Cache-Control': 'no-cache'
-        }
-        
-        response = requests.get(search_url, headers=headers)
-        if response.status_code == 200:
-            soup = BeautifulSoup(response.content, 'html.parser')
-            product_elements = soup.find_all('div', {'data-test': 'product-grid'})
-
-            items = []
-            for product in product_elements:
-                title_tag = product.find('a', {'data-test': 'product-title'})
-                title = title_tag.get_text(strip=True) if title_tag else 'N/A'
-
-                price_tag = product.find('span', {'data-test': 'product-price'})
-                price = price_tag.get_text(strip=True) if price_tag else 'N/A'
-
-                link_tag = title_tag['href'] if title_tag else '#'
-                link = f"https://www.target.com{link_tag}"
-
-                img_tag = product.find('img', {'data-test': 'product-image'})
-                img_link = img_tag['src'] if img_tag else 'N/A'
-
-                item = {
-                    'title': title,
-                    'price': price,
-                    'link': link,
-                    'img_link': img_link,
-                    'website': 'target',
-                    'timestamp': datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-                }
-                items.append(item)
-
-            self.result = items
-        else:
-            print(f"Failed to retrieve data, status code: {response.status_code}")
-
 
 class scrape_ebay(Thread):
     def __init__(self, query):
