@@ -55,6 +55,8 @@ class search(Thread):
             results = page.find_all(self.config['item_component'], self.config['item_indicator'])
         products = []
         print(len(results))
+        # breakpoint()
+        '''
         for res in results:
             title = res.select(self.config['title_indicator'])
             # price = res.select(self.config['price_indicator'])
@@ -68,6 +70,31 @@ class search(Thread):
 
             if product['title'] != '' and product['price'] != '' and product['link'] != '':
                 products.append(product)
+                '''
+        for res in results:
+            # Extract the title
+            title_tag = res.select_one('h4.sku-title a')
+            title = title_tag.get_text(strip=True) if title_tag else ''
+
+            # Extract the price
+            price_tag = res.select_one('div.priceView-hero-price span')
+            price = price_tag.get_text(strip=True) if price_tag else ''
+
+            # Extract the product link
+            link_tag = res.select_one('h4.sku-title a')
+            link = link_tag['href'] if link_tag else ''
+
+            # Extract the image link
+            img_tag = res.select_one('a.image-link img')
+            img_link = img_tag['src'] if img_tag else ''
+
+            # Formulate the product information
+            product = form.formatResult(self.config['site'], title, price, link, img_link)
+
+            # Append to products if required fields are populated
+            if product['title'] and product['price'] and product['link']:
+                products.append(product)
+
         self.result = products
 
     def httpsGet(self, URL):

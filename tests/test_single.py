@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov 30 2024
+Created on Tue Nov 30 00:03:30 2021
 
-@author: Weiyuan Ding
+@author: Rohan Shah
 """
 import os
 import sys
@@ -12,8 +12,9 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from src.main_streamlit import search_items_API
 
-def test_api_target():
+def test_api_bestbuy():
     product = 'laptop'
-    site = 'tg'
-    result = search_items_API(site, product)
-    assert result is not None
+    site = 'bb'
+    results = search_items_API(site, product)
+    breakpoint()
+    assert results is not None
