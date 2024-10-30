@@ -15,7 +15,7 @@ the required format.
 """
 
 
-def _formatResult(website, titles, prices, links, img_link):
+def formatResult(website, titles, prices, links, img_link):
     """
     The formatResult function takes the scraped HTML as input, and extracts the
     necessary values from the HTML code. Ex. extracting a price '$19.99' from
@@ -46,7 +46,7 @@ def _formatResult(website, titles, prices, links, img_link):
         product['link'] = f'{link}'
     return product
 
-def formatResult(website, titles, prices, links, img_link):
+def formatResultBestBuy(website, titles, prices, links, img_link):
     """
     The formatResult function takes the scraped HTML as input, and extracts the
     necessary values from the HTML code. Ex. extracting a price '$19.99' from

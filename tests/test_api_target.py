@@ -16,4 +16,5 @@ def test_api_target():
     product = 'laptop'
     site = 'tg'
     result = search_items_API(site, product)
+    breakpoint()
     assert result is not None

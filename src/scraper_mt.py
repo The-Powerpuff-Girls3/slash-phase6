@@ -55,45 +55,43 @@ class search(Thread):
             results = page.find_all(self.config['item_component'], self.config['item_indicator'])
         products = []
         print(len(results))
-        # breakpoint()
-        '''
         for res in results:
-            title = res.select(self.config['title_indicator'])
-            # price = res.select(self.config['price_indicator'])
-            price_div = res.find('div', {'data-automation-id': 'product-price'}).find('span', {'class': 'w_iUH7'})
-            price_parts = [span.get_text(strip=True) for span in price_div if span.get_text(strip=True)][0]
-            price = price_parts.split()[-1]
-            link = res.select(self.config['link_indicator'])
-            img_link = res.select(self.config['img_indicator'])
+            if self.config['site'] == 'bestbuy':
+                # Extract the title
+                title_tag = res.select_one('h4.sku-title a')
+                title = title_tag.get_text(strip=True) if title_tag else ''
 
-            product = form.formatResult(self.config['site'], title, price, link, img_link)
+                # Extract the price
+                price_tag = res.select_one('div.priceView-hero-price span')
+                price = price_tag.get_text(strip=True) if price_tag else ''
 
-            if product['title'] != '' and product['price'] != '' and product['link'] != '':
-                products.append(product)
-                '''
-        for res in results:
-            # Extract the title
-            title_tag = res.select_one('h4.sku-title a')
-            title = title_tag.get_text(strip=True) if title_tag else ''
+                # Extract the product link
+                link_tag = res.select_one('h4.sku-title a')
+                link = link_tag['href'] if link_tag else ''
 
-            # Extract the price
-            price_tag = res.select_one('div.priceView-hero-price span')
-            price = price_tag.get_text(strip=True) if price_tag else ''
+                # Extract the image link
+                img_tag = res.select_one('a.image-link img')
+                img_link = img_tag['src'] if img_tag else ''
 
-            # Extract the product link
-            link_tag = res.select_one('h4.sku-title a')
-            link = link_tag['href'] if link_tag else ''
+                # Formulate the product information
+                product = form.formatResultBestBuy(self.config['site'], title, price, link, img_link)
 
-            # Extract the image link
-            img_tag = res.select_one('a.image-link img')
-            img_link = img_tag['src'] if img_tag else ''
+                # Append to products if required fields are populated
+                if product['title'] and product['price'] and product['link']:
+                    products.append(product)
+            else:
+                title = res.select(self.config['title_indicator'])
+                # price = res.select(self.config['price_indicator'])
+                price_div = res.find('div', {'data-automation-id': 'product-price'}).find('span', {'class': 'w_iUH7'})
+                price_parts = [span.get_text(strip=True) for span in price_div if span.get_text(strip=True)][0]
+                price = price_parts.split()[-1]
+                link = res.select(self.config['link_indicator'])
+                img_link = res.select(self.config['img_indicator'])
 
-            # Formulate the product information
-            product = form.formatResult(self.config['site'], title, price, link, img_link)
+                product = form.formatResult(self.config['site'], title, price, link, img_link)
 
-            # Append to products if required fields are populated
-            if product['title'] and product['price'] and product['link']:
-                products.append(product)
+                if product['title'] != '' and product['price'] != '' and product['link'] != '':
+                    products.append(product)
 
         self.result = products
 

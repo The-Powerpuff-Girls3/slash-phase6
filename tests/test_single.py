@@ -14,7 +14,6 @@ from src.main_streamlit import search_items_API
 
 def test_api_bestbuy():
     product = 'laptop'
-    site = 'bb'
+    site = 'wm'
     results = search_items_API(site, product)
-    breakpoint()
     assert results is not None
