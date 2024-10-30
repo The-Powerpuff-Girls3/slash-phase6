@@ -10,6 +10,7 @@ from datetime import datetime
 import requests
 from ebaysdk.finding import Connection
 from threading import Thread
+from bs4 import BeautifulSoup
 
 # local imports
 from src.formattr import formatTitle
@@ -116,7 +117,6 @@ class scrape_target(Thread):
             'Cache-Control': 'no-cache'
         }
         data = requests.get(api_url, params=params, headers=headers).json()
-
         items = []
         if data["data"]:
             for p in data['data']['search']['products']:
