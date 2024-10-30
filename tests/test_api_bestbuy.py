@@ -141,3 +141,15 @@ def test_api_bestbuy_collected_produce_timestamp():
     results = search_items_API(site, product)
     for result in results:
         assert result['timestamp'] != ""
+
+def test_api_bestbuy_null():
+    product = ''
+    site = 'bb'
+    results = search_items_API(site, product)
+    assert results is None
+    
+def test_api_bestbuy_mojibake():
+    product = '!@#$%^&*()'
+    site = 'bb'
+    results = search_items_API(site, product)
+    assert results is None
