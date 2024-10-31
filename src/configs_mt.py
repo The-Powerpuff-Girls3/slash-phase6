@@ -10,6 +10,7 @@ from datetime import datetime
 import requests
 from ebaysdk.finding import Connection
 from threading import Thread
+from bs4 import BeautifulSoup
 
 # local imports
 from src.formattr import formatTitle

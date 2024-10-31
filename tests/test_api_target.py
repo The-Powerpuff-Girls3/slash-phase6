@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Nov 30 00:03:30 2021
+Created on Wed Nov 30 2024
 
-@author: Rohan Shah
+@author: Weiyuan Ding
 """
 import os
 import sys
@@ -13,7 +13,7 @@ sys.path.insert(0, parentdir)
 from src.main_streamlit import search_items_API
 
 def test_api_target():
-    product = 'dell'
+    product = 'laptop'
     site = 'tg'
     result = search_items_API(site, product)
     assert result is not None
