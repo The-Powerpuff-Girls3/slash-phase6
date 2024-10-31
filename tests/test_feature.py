@@ -18,7 +18,7 @@ def test_api_general_sort():
     product = 'laptop'
     site = 'all'
     results = search_items_API(site, product, order_by_col='price')
-    prices = [float(result['price'].replace('$', '')) for result in results]
+    prices = [float(result['price'].replace('$', '').replace(',', '')) for result in results]
     assert prices == sorted(prices)
     
 def test_api_general_reverse_sort():
@@ -26,5 +26,5 @@ def test_api_general_reverse_sort():
     product = 'laptop'
     site = 'all'
     results = search_items_API(site, product, order_by_col='price', reverse=True)
-    prices = [float(result['price'].replace('$', '')) for result in results]
+    prices = [float(result['price'].replace('$', '').replace(',', '')) for result in results]
     assert prices == sorted(prices, reverse=True)
