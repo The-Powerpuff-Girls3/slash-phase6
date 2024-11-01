@@ -42,19 +42,12 @@ WALMART = {
     'title_indicator': 'h2 a span',
     'price_indicator': 'span.a-price span',
     'link_indicator': 'h2 a.a-link-normal'
-}
+}'''
 
 COSTCO = {
     'site': 'costco',
-    'url': 'https://www.costco.com/CatalogSearch?dept=All&keyword=',
-    'item_component': 'div',
-    'item_indicator': {
-        'class': 'product-tile-set'
-    },
-    'title_indicator': 'span a',
-    'price_indicator': 'div.price',
-    'link_indicator': 'span.description a',
-}'''
+    'url': 'https://www.costco.com/s?dept=All&keyword=',
+}
 
 BESTBUY = {
     'site': 'bestbuy',

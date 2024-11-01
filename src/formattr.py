@@ -46,6 +46,7 @@ def formatResult(website, titles, prices, links, img_link):
         product['link'] = f'{link}'
     return product
 
+
 def formatResultBestBuy(website, titles, prices, links, img_link):
     """
     The formatResult function takes the scraped HTML as input, and extracts the
@@ -82,6 +83,25 @@ def formatResultBestBuy(website, titles, prices, links, img_link):
             product['link']=f'{link}'
     if website == 'costco':
         product['link'] = f'{link}'
+    return product
+
+
+def formatResultCostco(website, product):
+    """
+    This function formats the results from the Costco scraper. Since we use different operation flow for Costco,
+    we need to format the results differently.
+    param: 
+        website: str: The website name
+        product: dict: The product dictionary contains parts of product information
+    return:
+        product: dict: The formatted product dictionary with full product information
+    """
+
+    # add timestamp
+    product['timestamp'] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    # add website
+    product['website'] = website
+
     return product
 
 
