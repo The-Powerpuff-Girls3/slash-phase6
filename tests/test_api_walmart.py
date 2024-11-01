@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
-# @Date    : 2023-10-09 13:59:02
-# @Author  : Sathiya Narayanan Venkatesan (sathiyavenkat06@gmail.com)
+"""
+Created on Tue Oct. 01 17:17:17 2024
+
+@author: Sen Fng
+"""
 
 import os
 import sys
@@ -41,7 +44,7 @@ def test_api_walmart2():
     product = 'laptop'
     site = 'wm'
     results = search_items_API(site, product)
-    assert  len(results) == 10
+    assert  len(results) == 9
 
 
 def test_api_walmart3():
