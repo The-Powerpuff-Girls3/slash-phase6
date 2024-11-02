@@ -47,7 +47,7 @@ def search_items_API(
     # building argument
     args = {
         'search': item_name,
-        'sort': ['pr'] if order_by_col == 'price' else [],  # placeholder TDB
+        'sort': ['pr'] if order_by_col == 'price' else ['cao'],  # placeholder TDB
         'des': reverse,  # placeholder TBD
         'num': listLengthInd,
         'relevant': relevant
