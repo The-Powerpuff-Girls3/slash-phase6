@@ -82,27 +82,27 @@ Following these steps, you will successfully run the Slash application and exper
 
 ### Register
 
-![2024-11-01 18.45.21.png](Slash-Phase6/2024-11-01_18.45.21.png)
+![2024-11-01 18.45.21.png](../assets/Slash-Phase6/2024-11-01_18.45.21.png)
 
 ### Login
 
-![2024-11-01 18.52.22.png](Slash-Phase6/2024-11-01_18.52.22.png)
+![2024-11-01 18.52.22.png](../assets/Slash-Phase6/2024-11-01_18.52.22.png)
 
 ### Search Function
 
-![2024-11-01 18.45.38.png](Slash-Phase6/2024-11-01_18.45.38.png)
+![2024-11-01 18.45.38.png](../assets/Slash-Phase6/2024-11-01_18.45.38.png)
 
 ### Search Results by walmart
 
-![2024-11-01 18.46.04.png](Slash-Phase6/2024-11-01_18.46.04.png)
+![2024-11-01 18.46.04.png](../assets/Slash-Phase6/2024-11-01_18.46.04.png)
 
 ### Search Results by bestbuy
 
-![截屏2024-11-01 18.47.04.png](Slash-Phase6/2024-11-01_18.47.04.png)
+![截屏2024-11-01 18.47.04.png](../assets/Slash-Phase6/2024-11-01_18.47.04.png)
 
 ### Search Results by ebay
 
-![截屏2024-11-01 18.47.55.png](Slash-Phase6/2024-11-01_18.47.55.png)
+![截屏2024-11-01 18.47.55.png](../assets/Slash-Phase6/2024-11-01_18.47.55.png)
 
 ## Third Party Dependencies
 
@@ -156,6 +156,7 @@ PyMySQL==1.0.2
 pyshorteners==1.0.1
 python-dateutil==2.8.2
 python-jose==3.3.0
+pytest==8.3.3
 python-multipart==0.0.5
 pytz==2023.3.post1
 referencing==0.30.2
