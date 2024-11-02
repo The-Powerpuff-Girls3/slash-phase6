@@ -25,8 +25,10 @@ def formatResult(website, titles, prices, links, img_link):
     if titles:
         title = titles[0].get_text().strip()
     if prices:
-        # price = prices[0].get_text().strip()
-        price = prices
+        if website == "walmart" or website == "ebay":
+            price = prices
+        else:
+            price = prices[0].get_text().strip()
     if links:
         link = links[0]['href']
     if img_link:
