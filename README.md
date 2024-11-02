@@ -1,9 +1,9 @@
 <p align="center"><img width="500" src="./assets/slash.png"></p>
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10211531.svg)](https://doi.org/10.5281/zenodo.10211531)
+[![DOI](https://zenodo.org/badge/882147579.svg)](https://doi.org/10.5281/zenodo.14027393)
 
 [![codecov](https://codecov.io/gh/SE23-Team44/slash-phase4/branch/main/graph/badge.svg?token=9YO9QKQZPJ)](https://codecov.io/gh/SE23-Team44/slash-phase4)
-[![GitHub Release](https://img.shields.io/badge/release-v1.0.1.1-blue)](https://github.com/MeryHarikaG/slash-phase5)
+[![GitHub Release](https://img.shields.io/badge/release-v6.0.11.1-blue)](https://github.com/DFY-NCSU/slash-phase6)
 [![Build Status](https://app.travis-ci.com/rohan22shah/slash-phase3.svg?branch=main)](https://app.travis-ci.com/rohan22shah/slash-phase3)
 [![Python Style Checker](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/style_checker.yml/badge.svg)](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/style_checker.yml)
 [![Run Tests On Push](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/unit_test.yml/badge.svg)](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/unit_test.yml)
@@ -14,19 +14,19 @@
 
 
 <!--Badges-->
-<a href="https://github.com/MeryHarikaG/slash-phase5/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/MeryHarikaG/slash-phase5"></a>
-<a href="https://github.com/MeryHarikaG/slash-phase5/forks"><img alt="GitHub forks" src="https://img.shields.io/github/forks/MeryHarikaG/slash-phase5"></a>
-<a href="https://github.com/MeryHarikaG/slash-phase5/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/MeryHarikaG/slash-phase5"></a>
-<a href="https://github.com/MeryHarikaG/slash-phase5/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/MeryHarikaG/slash-phase5"></a>
-<a href="https://github.com/MeryHarikaG/slash-phase5/issues"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/MeryHarikaG/slash-phase5">
-<a href="https://github.com/MeryHarikaG/slash-phase5/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/MeryHarikaG/slash-phase5">
+<a href="https://github.com/DFY-NCSU/slash-phase6/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/MeryHarikaG/slash-phase5"></a>
+<a href="https://github.com/DFY-NCSU/slash-phase6/forks"><img alt="GitHub forks" src="https://img.shields.io/github/forks/MeryHarikaG/slash-phase5"></a>
+<a href="https://github.com/DFY-NCSU/slash-phase6/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/MeryHarikaG/slash-phase5"></a>
+<a href="https://github.com/DFY-NCSU/slash-phase6/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/MeryHarikaG/slash-phase5"></a>
+<a href="https://github.com/DFY-NCSU/slash-phase6/issues"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/MeryHarikaG/slash-phase5">
+<a href="https://github.com/DFY-NCSU/slash-phase6/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/MeryHarikaG/slash-phase5">
 <img alt="Discord Channel" src="https://img.shields.io/discord/1162231656980168876">
 
 
 <p align="center">
-    <a href="https://github.com/MeryHarikaG/slash-phase5/issues/new/choose">Report Bug</a>
+    <a href="https://github.com/DFY-NCSU/slash-phase6/issues/new/choose">Report Bug</a>
     ·
-    <a href="https://github.com/MeryHarikaG/slash-phase5/issues/new/choose">Request Feature</a>
+    <a href="https://github.com/DFY-NCSU/slash-phase6/issues/new/choose">Request Feature</a>
 </p>
 
 ```diff
