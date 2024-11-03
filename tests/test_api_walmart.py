@@ -43,8 +43,9 @@ def test_api_walmart2():
     """Assert that the API returns a list of items (9 items)"""
     product = 'laptop'
     site = 'wm'
-    results = search_items_API(site, product)
-    assert  len(results) == 9
+    num = 9
+    results = search_items_API(site, product, listLengthInd=num)
+    assert  len(results) == num
 
 
 def test_api_walmart3():

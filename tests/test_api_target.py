@@ -163,15 +163,16 @@ def test_target_results():
     # Ensures that exactly 10 results are returned by search_items_API for 'laptop' from target
     product = 'dell'
     site = 'tg'
-    results = search_items_API(site, product)
-    assert len(results) == 10
+    num = 9
+    results = search_items_API(site, product, listLengthInd=num)
+    assert len(results) == num
 
 def test_have_more_results():
     # Ensures that there have results are returned by search_items_API for 'laptop' from target
     product = 'dell'
     site = 'tg'
     results = search_items_API(site, product)
-    assert len(results) >0
+    assert len(results) > 0
 
 def check_price(price):
     # Removes the dollar sign from the price string and attempts to convert it to a float
