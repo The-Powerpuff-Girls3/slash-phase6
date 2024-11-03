@@ -15,7 +15,7 @@ from src.main_streamlit import search_items_API
 
 
 def check_price(price):
-    price = price.replace('$', '')
+    price = price.replace('$', '').replace(',', '')
     try:
         price = float(price)
         return True
