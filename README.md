@@ -2,6 +2,9 @@
 
 [![DOI](https://zenodo.org/badge/882147579.svg)](https://doi.org/10.5281/zenodo.14027393)
 
+[![Flake8 Lint](https://github.com/<USERNAME>/<REPOSITORY>/actions/workflows/flake8.yml/badge.svg)](https://github.com/<USERNAME>/<REPOSITORY>/actions/workflows/flake8.yml)
+
+
 [![codecov](https://codecov.io/gh/SE23-Team44/slash-phase4/branch/main/graph/badge.svg?token=9YO9QKQZPJ)](https://codecov.io/gh/SE23-Team44/slash-phase4)
 [![GitHub Release](https://img.shields.io/badge/release-v6.0.11.1-blue)](https://github.com/DFY-NCSU/slash-phase6)
 [![Build Status](https://app.travis-ci.com/rohan22shah/slash-phase3.svg?branch=main)](https://app.travis-ci.com/rohan22shah/slash-phase3)
