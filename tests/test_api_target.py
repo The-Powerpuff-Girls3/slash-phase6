@@ -177,7 +177,7 @@ def test_have_more_results():
 def check_price(price):
     # Removes the dollar sign from the price string and attempts to convert it to a float
     # Returns True if successful, False if a ValueError is raised (indicating invalid price format)
-    price = str(price).replace('$', '')
+    price = str(price).replace('$', '').replace(',', '')
     try:
         price = float(price)
         return True
