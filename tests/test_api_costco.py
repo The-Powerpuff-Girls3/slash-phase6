@@ -35,8 +35,9 @@ def test_api_costco1():
     """Assert that the API returns a list of items"""
     product = 'laptop'
     site = 'ct'
-    result = search_items_API(site, product)
-    assert len(result) > 0 and len(result) == 24
+    num = 13
+    result = search_items_API(site, product, listLengthInd=num)
+    assert len(result) > 0 and len(result) == num
 
 
 def test_api_costco2():

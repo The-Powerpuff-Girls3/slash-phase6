@@ -210,45 +210,45 @@ def scrape(args, scrapers):
         if scrapers[i] == 'bestbuy':
             t_bb.join()
             i += 1
-            local = t_bb.result
+            local = t_bb.result[:args.get('num', len(t_bb.result))]
             for sort_by in args['sort']:
-                local = form.sortList(local, sort_by, args['des'])[:args.get('num', len(t_bb.result))]
+                local = form.sortList(local, sort_by, args['des'])
             overall.extend(local)
             if i == len(scrapers):
                 break
         if scrapers[i] == 'costco':
             t_ct.join()
             i += 1
-            local = t_ct.result
+            local = t_ct.result[:args.get('num', len(t_ct.result))]
             for sort_by in args['sort']:
-                local = form.sortList(local, sort_by, args['des'])[:args.get('num', len(t_ct.result))]
+                local = form.sortList(local, sort_by, args['des'])
             overall.extend(local)
             if i == len(scrapers):
                 break
         if scrapers[i] == 'ebay':
             t_eb.join()
             i += 1
-            local = t_eb.result
+            local = t_eb.result[:args.get('num', len(t_eb.result))]
             for sort_by in args['sort']:
-                local = form.sortList(local, sort_by, args['des'])[:args.get('num', len(t_eb.result))]
+                local = form.sortList(local, sort_by, args['des'])
             overall.extend(local)
             if i == len(scrapers):
                 break
         if scrapers[i] == 'target':
             t_tg.join()
             i += 1
-            local = t_tg.result
+            local = t_tg.result[:args.get('num', len(t_tg.result))]
             for sort_by in args['sort']:
-                local = form.sortList(local, sort_by, args['des'])[:args.get('num', len(t_tg.result))]
+                local = form.sortList(local, sort_by, args['des'])
             overall.extend(local)
             if i == len(scrapers):
                 break
         if scrapers[i] == 'walmart':
             t_wm.join()
             i += 1
-            local = t_wm.result
+            local = t_wm.result[:args.get('num', len(t_wm.result))]
             for sort_by in args['sort']:
-                local = form.sortList(local, sort_by, args['des'])[:args.get('num', len(t_wm.result))]
+                local = form.sortList(local, sort_by, args['des'])
             overall.extend(local)
             if i == len(scrapers):
                 break

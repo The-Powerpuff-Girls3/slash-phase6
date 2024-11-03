@@ -39,8 +39,9 @@ def test_api_ebay1():
 def test_api_ebay2():
     product = 'lenovo'
     site = 'eb'
-    results = search_items_API(site, product)
-    assert len(results) == 10
+    num = 9
+    results = search_items_API(site, product, listLengthInd=num)
+    assert len(results) == num
 
 
 def test_api_ebay3():
