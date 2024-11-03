@@ -41,8 +41,9 @@ def test_api_bestbuy2():
     # Ensures that exactly 10 results are returned by search_items_API for 'laptop' from Best Buy
     product = 'laptop'
     site = 'bb'
-    results = search_items_API(site, product)
-    assert len(results) == 10
+    num = 8
+    results = search_items_API(site, product, listLengthInd=num)
+    assert len(results) == num
 
 def test_api_bestbuy3():
     # Confirms that the results returned by search_items_API are in list format
