@@ -16,7 +16,7 @@ from src.main_streamlit import search_items_API
 def check_price(price):
     # Removes the dollar sign from the price string and attempts to convert it to a float
     # Returns True if successful, False if a ValueError is raised (indicating invalid price format)
-    price = price.replace('$', '')
+    price = price.replace('$', '').replace(',', '')
     try:
         price = float(price)
         return True
