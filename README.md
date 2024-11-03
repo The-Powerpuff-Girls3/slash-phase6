@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/882147579.svg)](https://doi.org/10.5281/zenodo.14027393)
 
-[![Flake8 Lint](https://github.com/<USERNAME>/<REPOSITORY>/actions/workflows/flake8.yml/badge.svg)](https://github.com/<USERNAME>/<REPOSITORY>/actions/workflows/flake8.yml)
+[![Flake8 Lint](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml)
 
 
 [![codecov](https://codecov.io/gh/SE23-Team44/slash-phase4/branch/main/graph/badge.svg?token=9YO9QKQZPJ)](https://codecov.io/gh/SE23-Team44/slash-phase4)
