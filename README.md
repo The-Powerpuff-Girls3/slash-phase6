@@ -2,52 +2,65 @@
 
 [![DOI](https://zenodo.org/badge/882147579.svg)](https://doi.org/10.5281/zenodo.14027393)
 
+[![GitHub Release](https://img.shields.io/badge/release-v6.0.11.1-blue)](https://github.com/DFY-NCSU/slash-phase6)
 [![Flake8 Lint](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml)
 [![Syntax Check](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/main.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/syntax.yml)
 [![Python Style Checker](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/style.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/style.yml)
-[![codecov](https://codecov.io/gh/DFY-NCSU/slash-phase6/branch/test/workflow/graph/badge.svg?token=oJrKEnEGwP)](https://codecov.io/gh/DFY-NCSU/slash-phase6/tree/test/workflow)
+[![Python Application](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/python-app.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/python-app.yml)
+[![codecov](https://codecov.io/gh/DFY-NCSU/slash-phase6/branch/main/graph/badge.svg?token=oJrKEnEGwP)](https://codecov.io/gh/DFY-NCSU/slash-phase6/tree/main)
 
+
+<!-- <p align="center"><img width="500" src="assets/slash_new.png"></p> -->
+<!-- 
+[![DOI](https://zenodo.org/badge/882147579.svg)](https://doi.org/10.5281/zenodo.14027393)
 
 [![codecov](https://codecov.io/gh/SE23-Team44/slash-phase4/branch/main/graph/badge.svg?token=9YO9QKQZPJ)](https://codecov.io/gh/SE23-Team44/slash-phase4)
 [![GitHub Release](https://img.shields.io/badge/release-v6.0.11.1-blue)](https://github.com/DFY-NCSU/slash-phase6)
-[![Build Status](https://app.travis-ci.com/rohan22shah/slash-phase3.svg?branch=main)](https://app.travis-ci.com/rohan22shah/slash-phase3)
 [![Python Style Checker](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/style_checker.yml/badge.svg)](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/style_checker.yml)
 [![Run Tests On Push](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/unit_test.yml/badge.svg)](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/unit_test.yml)
 [![Python Application](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/python-app.yml/badge.svg)](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/python-app.yml)
 [![Lint Python](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/main.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/main.yml)
 [![Running Code Coverage](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/code_cov.yml/badge.svg)](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/code_cov.yml)
-[![Close as a feature](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/close_as_a_feature.yml)
+[![Close as a feature](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/close_as_a_feature.yml) -->
 
 
 <!--Badges-->
-<a href="https://github.com/DFY-NCSU/slash-phase6/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/MeryHarikaG/slash-phase5"></a>
-<a href="https://github.com/DFY-NCSU/slash-phase6/forks"><img alt="GitHub forks" src="https://img.shields.io/github/forks/MeryHarikaG/slash-phase5"></a>
-<a href="https://github.com/DFY-NCSU/slash-phase6/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/MeryHarikaG/slash-phase5"></a>
-<a href="https://github.com/DFY-NCSU/slash-phase6/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/MeryHarikaG/slash-phase5"></a>
-<a href="https://github.com/DFY-NCSU/slash-phase6/issues"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/MeryHarikaG/slash-phase5">
-<a href="https://github.com/DFY-NCSU/slash-phase6/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/MeryHarikaG/slash-phase5">
-<img alt="Discord Channel" src="https://img.shields.io/discord/1162231656980168876">
+<a href="https://github.com/DFY-NCSU/slash-phase6/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/DFY-NCSU/slash-phase6"></a>
+<a href="https://github.com/DFY-NCSU/slash-phase6/forks"><img alt="GitHub forks" src="https://img.shields.io/github/forks/DFY-NCSU/slash-phase6"></a>
+<a href="https://github.com/DFY-NCSU/slash-phase6/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/DFY-NCSU/slash-phase6"></a>
+<a href="https://github.com/DFY-NCSU/slash-phase6/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/DFY-NCSU/slash-phase6"></a>
+<a href="https://github.com/DFY-NCSU/slash-phase6/issues?q=is%3Aissue+is%3Aclosed"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/DFY-NCSU/slash-phase6">
+<a href="https://github.com/DFY-NCSU/slash-phase6/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/DFY-NCSU/slash-phase6">
+<a href="https://github.com/DFY-NCSU/slash-phase6/pulls?q=is%3Apr+is%3Aclosed"><img alt="GitHub closed pull requests" src="https://img.shields.io/github/issues-pr-closed/DFY-NCSU/slash-phase6">
+<a href="https://github.com/DFY-NCSU/slash-phase6/discussions"><img alt="GitHub discussion channel" src="https://img.shields.io/github/discussions/DFY-NCSU/slash-phase6">
 
 
 <p align="center">
-    <a href="https://github.com/DFY-NCSU/slash-phase6/issues/new/choose">Report Bug</a>
+    <a href="https://github.com/DFY-NCSU/slash-phase6/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
     ·
-    <a href="https://github.com/DFY-NCSU/slash-phase6/issues/new/choose">Request Feature</a>
+    <a href="https://github.com/DFY-NCSU/slash-phase6/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
 </p>
 
-```diff
+<!-- ```diff
 ! All the latest changes in slash-phase5 are in "main" branch.
 ! Score cards (Rubric) are in "Project 3" folder.
-```
+``` -->
 
 
 Do you love shopping? Are you in search of some good deals while shopping online?! Slash is here to help you look for the best deals!
 
 
-Slash is a publicly accessible web API framework that allows one to scrape the most popular e-commerce websites to get the best deals on the searched items across multiple e-commerce websites. Currently supported websites include [Walmart](https://www.walmart.com/), [Target](https://www.target.com/), [BestBuy](https://www.bestbuy.com/), and [EBay](https://www.ebay.com/).
-- **Fast**: With slash, you can save over 50% of your time by comparing deals across websites within seconds
-- **Easy**: Slash introduces easy to use public APIs to filter, sort and search through the search results
-- **Powerful**: Produces JSON responses that can be easily customised to bring about the desired output
+<!-- Slash is a publicly accessible web API framework that allows one to scrape the most popular e-commerce websites to get the best deals on the searched items across multiple e-commerce websites. Currently supported websites include [Walmart](https://www.walmart.com/), [Target](https://www.target.com/), [BestBuy](https://www.bestbuy.com/), [Costco](https://www.costco.com), and [EBay](https://www.ebay.com/). -->
+Tired of searching multiple websites for the best deals? Slash is 
+here to make your online shopping experience smarter and faster! 
+Slash is a web API framework that automatically scrapes top 
+e-commerce sites—[Walmart](https://www.walmart.com/), [Target](https://www.target.com/), [BestBuy](https://www.bestbuy.com/), [Costco](https://www.costco.com), and [EBay](https://www.ebay.com/)—to 
+find and compare the best deals, saving you time and money. Whether 
+you're a student on a budget or a data analyst building real-time 
+datasets, Slash is the tool for you.
+- **Fast**: Compare deals across platforms in seconds.
+- **Easy**: User-friendly APIs to filter, sort, and customize search results.
+- **Powerful**: Delivers tailored results in JSON format, perfect for seamless integration.
 
 ---
 
@@ -86,13 +99,14 @@ Slash is a publicly accessible web API framework that allows one to scrape the m
 ---
 1. Clone the Github repository to a desired location on your computer. You will need [git](https://git-scm.com/) to be preinstalled on your machine. Once the repository is cloned, you will then ```cd``` into the local repository.
 ```
-git clone https://github.com/MeryHarikaG/slash-phase5.git
+git clone https://github.com/DFY-NCSU/slash-phase6.git
+cd slash-phase6
 ```
-2. This project uses Python 3, so make sure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled. All requirements of the project are listed in the ```requirements.txt``` file. Use pip to install all of those.
+1. This project uses Python 3, so make sure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled. All requirements of the project are listed in the ```requirements.txt``` file. Use pip to install all of those.
 ```
 pip3 install -r requirements.txt
 ```
-3. To run this project, you must install PostgreSQL on your system. If you haven't already installed it, you can download the latest version of PostgreSQL from the official website: [PostgreSQL Downloads](https://www.postgresql.org/download/).
+1. To run this project, you must install PostgreSQL on your system. If you haven't already installed it, you can download the latest version of PostgreSQL from the official website: [PostgreSQL Downloads](https://www.postgresql.org/download/).
 
 ### Configuring Database Connection
 
@@ -108,7 +122,7 @@ ii. Locate the top section of the code where you define the database connection 
    ```
 Replace username and password value from 'postgres', 'pass' with your PostgreSQL username password, respectively.
 
-4. Once all the requirements are installed, you will have to ```cd``` into the ```src``` folder. Once in the ```src``` folder, use the python command to run the ```main.py``` file. (/MeryHarikaG/slash-phase5/src => you should be at this level)
+4. Once all the requirements are installed, you will have to enter the `src` folder. Once in the `src` folder, use the python command to run the `main.py` file.
 ```
 cd src
 
@@ -118,8 +132,10 @@ python3 main.py
 For Windows
 python main.py
 ```
-5. While the above is running, go to new terminal and run streamlit application. Firstly go up one directory level using ```cd ..``` and use the following command:  (/MeryHarikaG/slash-phase5 => you should be at this level)
+5. While the above is running, go to new terminal and run streamlit application. Firstly go back to the root directory and run the following command:
 ```
+cd ..
+
 For Mac
 python3 -m streamlit run slash_user_interface.py
 
@@ -129,15 +145,15 @@ streamlit run slash_user_interface.py
 
 :computer: Technology Used
 ---
-- Streamlit [https://streamlit.io/]
-- Fast API
-- Postgre SQL
-- Python
+- [Streamlit](https://streamlit.io/)
+- [Fast API](https://fastapi.tiangolo.com)
+- [Postgre SQL](https://www.postgresql.org)
+- [Python](https://www.python.org)
 
 :bulb: Use Case
 ---
 * ***Students***: Students coming to university are generally on a budget and time constraint and generally spend hours wasting time to search for products on Websites. Slash is the perfect tool for these students that slashes all the unnecessary details on a website and helps them get prices for a product across multiple websites.Make the most of this tool in the upcoming Black Friday Sale.
-* ***Data Analysts***: Finding data for any project is one of the most tedious job for a data analyst, and the datasets found might not be the most recent one. Using slash, they can create their own dataset in real time and format it as per their needs so that they can focus on what is actually inportant.
+* ***Data Analysts***: Finding data for any project is one of the most tedious job for a data analyst, and the datasets found might not be the most recent one. Using slash, they can create their own dataset in real time and format it as per their needs so that they can focus on what is actually important.
 
 :page_facing_up: Why
 ---
@@ -149,68 +165,48 @@ streamlit run slash_user_interface.py
 - Slash in its current form is for students who wish to get the best deals out of every e-commerce site and can be used by anyone who is willing to develop an application that consumes these web APIs.
 - Future scope includes anything from a web application with a frontend or any Android or IOS application that utilises these Web APIs at their backend. Anyone can build their own custom application on top of these web APIs.
 
-:golf: Phase 5 developments
+:golf: Phase 6 developments
 ---
-1. **Price Filtering**
-   - Description: We have added a price filtering feature that allows users to specify a minimum and maximum price range for their product searches.
-   - Functionality: Users can now refine their search results by setting price limits, ensuring they see only products within their budget.
-2. **Price-Based Sorting**
-   - Description: A new sorting feature has been integrated, enabling users to sort products based on their price, from the cheapest to the most expensive.
-   - Functionality: This feature enhances the usability of the search function, allowing users to quickly find products that match their price preferences.
-3. **Highlighting the Cheapest Product**
-   - Description: To aid users in quickly identifying the most affordable options, the cheapest product in any search or filter result is now highlighted.
-   - Functionality: This visual cue helps users easily locate the best deals without having to manually compare prices.
-4. **Enhanced User Interface**
-   - Description: Made the UI user friendly and more informative, so that user can use the application easily. The user interface has also been overhauled for a more intuitive and aesthetically pleasing experience.
-   - Functionality: Improvements include streamlined navigation, responsive design elements, and a more cohesive color scheme and typography, enhancing overall user interaction with the application.
-5. **Wishlist page Enhancements**
-   - Description: Most recently added item to wishlist is highlighted and list is displayed based on time of the addition of item to wishlist.
-   - Functionality: Recently added items are displayed first on the list. 
-6. **Wishlist and Registration Bug Fixes**
-   - Description: We addressed and resolved previously identified bugs in the wishlist and registration pages.
-   - Functionality: Users can now seamlessly add or remove items from their wishlist without encountering errors, and the registration process has been optimized for better reliability and user feedback.
+1. **Expanded Platform Coverage with Costco Integration**
+   - **Description**: The project now supports Costco, in addition to previously integrated platforms like Walmart and Target, offering users a broader selection of products and prices.
+   - **Functionality**: Users can access pricing and product information from Costco alongside other platforms, ensuring a more comprehensive shopping experience.
 
-<img src = https://github.com/MeryHarikaG/slash-phase5/blob/main/media/Website_2.png>
-<img src = https://github.com/MeryHarikaG/slash-phase5/blob/main/media/Website_3.png>
-<img src = https://github.com/MeryHarikaG/slash-phase5/blob/main/media/Wishlist%20page.png>
+2. **Improved Filtering and Sorting Capabilities**
+   - **Description**: Logical bugs in the sorting function have been corrected, and new filtering options allow users to easily narrow down searches by price.
+   - **Functionality**: Users can refine searches with advanced sorting and filtering features, enabling more precise price-based sorting and facilitating better deal discovery.
+
+3. **Reliable and Refined Scraper Performance**
+   - **Description**: Bug fixes have been implemented to address previous issues with scrapers, ensuring consistent and accurate retrieval of price information.
+   - **Functionality**: Scrapers now reliably gather up-to-date pricing from multiple e-commerce sites, providing users with accurate and timely data.
+
+4. **Advanced Price Sorting and Enhanced User Interface**
+   - **Description**: The frontend has been redesigned to improve user experience with intuitive navigation, highlighted deals, and a clear wishlist display.
+   - **Functionality**: Users enjoy a visually appealing interface with improved navigation, deal highlights, and an organized wishlist, making the application smoother and more enjoyable to use.
+
+<img src = https://github.com/DFY-NCSU/slash-phase6/blob/dev/media/exp1.png>
+<img src = https://github.com/DFY-NCSU/slash-phase6/blob/dev/media/exp2.png>
+<img src = https://github.com/DFY-NCSU/slash-phase6/blob/dev/media/exp3.png>
 
 :golf: Future Roadmap
 ---
-Future Roadmap
-
-* Pagination Feature: Implement a pagination feature for the result table allowing to scrape and display multiple results from various e-commerce sites in an organized manner.
-
-* Additional Account Settings: Introduce additional account settings to give users more control over their profiles and preferences, enhancing their personalization and usability.
-
-* Predictive Model: Develop a predictive model that can determine the optimal timing for purchasing the least expensive product from the search results. This feature will provide valuable guidance to users, helping them make informed decisions.
-
-* Enhanced Search Capabilities: Improve the search functionality by introducing advanced search capabilities. This can include options for filtering search results based on ratings, and other relevant criteria, giving users more refined search options.
-
-* Multi-Platform Integration: Expand the platform's capabilities by incorporating search results from various e-commerce platforms such as Etsy, Dick's Sporting Goods, and more. This will provide users with optimized outcomes from a diverse selection of online vendors.
-
-* Social Media Login: Add support for different methods of login, such as Gmail, Facebook, or other social media accounts, to provide users with convenient and secure login options.
-
-* Price Chart Visualization: Introduce a visual representation of price trends for products. This feature can help users understand historical price changes and make more informed purchasing decisions.
-
-* Wishlist Sharing: Enable users to share their wishlists with others. This collaborative feature can be useful for sharing gift ideas or getting recommendations from friends and family.
-
+- Advanced Search Capabilities: We will enhance the current search functionality by adding more advanced filters such as product ratings, seller ratings, availability, and shipping time, giving users more refined control over search results, improving user satisfaction.
+- Predictive Price Model: We plan to implement a machine learning-based predictive model that advises users on the optimal time to make purchases, based on historical price trends and forecasting.
+- Pagination for Search Results: A pagination                  system to improve the display of search results,          particularly for large datasets is in progress.
+- Social Media Login and Sharing: We plan to allow users to log in using social media accounts (e.g., Google, Facebook) and share their wishlists or best deals directly with friends via social platforms.
+- Price Chart Visualization: We are going to introduce dynamic visualizations of price trends for products, allowing users to track price changes over time in a graphical format.
 
 :sparkles: Contributors
 ---
 
-1. Mery Harika Gaddam (mgaddam@ncsu.edu)
-2. Sri Lakshmi Kotha (skotha2@ncsu.edu)
-3. Tanmaiyee Battula (tbattul@ncsu.edu)
-4. Kavya Lalbahadur Joshi (kjoshi4@ncsu.edu)
-
+1. Sen Fang (sfang9@ncsu.edu)
+2. Weiyuan Ding (wding8@ncsu.edu)
+3. Xiaoran Yang (xyang49@ncsu.edu)
 
 
 ## 🙏 Acknowledgements <a name="Acknowledgement"></a>
 We would like to thank Professor Dr Timothy Menzies for helping us understand the process of Maintaining a good Software Engineering project. We would also like to thank the teaching assistants for their support throughout the project.
-We would also like to extend our gratitude to previous group : https://github.com/SE23-Team44/slash-phase4
-- [https://streamlit.io/](https://streamlit.io/)
-- [https://shields.io/](https://shields.io/)
+We would also like to extend our gratitude to previous group: https://github.com/MeryHarikaG/slash-phase5
 
 :email: Support
 ---
-For any queries and help, please reach out to us at : simlyclipse43@gmail.com
+For any queries and help, please reach out to us at: thefatblue@gmail.com
