@@ -4,7 +4,7 @@
 
 [![GitHub Release](https://img.shields.io/badge/release-v6.0.11.1-blue)](https://github.com/DFY-NCSU/slash-phase6)
 [![Flake8 Lint](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml)
-[![Syntax Check](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/main.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/syntax.yml)
+[![Syntax Check](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/syntax.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/syntax.yml)
 [![Python Style Checker](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/style.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/style.yml)
 [![Python Application](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/python-app.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/python-app.yml)
 [![codecov](https://codecov.io/gh/DFY-NCSU/slash-phase6/branch/main/graph/badge.svg?token=oJrKEnEGwP)](https://codecov.io/gh/DFY-NCSU/slash-phase6/tree/main)
