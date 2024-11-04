@@ -42,7 +42,7 @@ def test_price_existance():
 
 
 def test_time_existance():
-    #Check if the time is exist
+    # Check if the time is exist
     product = 'dell'
     site = 'tg'
     result = search_items_API(site, product)
@@ -51,7 +51,7 @@ def test_time_existance():
 
 
 def test_link_existance():
-    #Check if the link is exist
+    # Check if the link is exist
     product = 'dell'
     site = 'tg'
     result = search_items_API(site, product)
@@ -60,7 +60,7 @@ def test_link_existance():
 
 
 def test_title_existance():
-    #Check if the title is exist
+    # Check if the title is exist
     product = 'dell'
     site = 'tg'
     result = search_items_API(site, product)
@@ -69,7 +69,7 @@ def test_title_existance():
 
 
 def test_item_info_length():
-    #Check the length of the item_info
+    # Check the length of the item_info
     product = 'dell'
     site = 'tg'
     result = search_items_API(site, product)
@@ -94,8 +94,9 @@ def test_link_http():
     for i in range(len(result)):
         assert result[i]['link'][:4] == "http"
 
+
 def test_price_length():
-    #Check the length of the price
+    # Check the length of the price
     product = 'dell'
     site = 'tg'
     result = search_items_API(site, product)
@@ -104,7 +105,7 @@ def test_price_length():
 
 
 def test_seller_rating_range():
-    #Check the seller rating
+    # Check the seller rating
     product = 'dell'
     site = 'tg'
     result = search_items_API(site, product)
@@ -129,11 +130,13 @@ def test_isinstance():
     results = search_items_API(site, product)
     assert isinstance(results[0], dict)
 
+
 def test_list_format():
     product = 'dell'
     site = 'tg'
     results = search_items_API(site, product)
     assert isinstance(results, list)
+
 
 def test_collected_produce_title():
     # Checks that each result's 'title' value is in a valid numeric format by calling check_price function
@@ -143,6 +146,7 @@ def test_collected_produce_title():
     for result in results:
         assert result['title'] != ""
 
+
 def test_collected_produce_timestamp():
     # Checks that each result's 'timestamp' value is in a valid numeric format by calling check_price function
     product = 'dell'
@@ -150,6 +154,7 @@ def test_collected_produce_timestamp():
     results = search_items_API(site, product)
     for result in results:
         assert result['timestamp'] != ""
+
 
 def test_collected_produce_price():
     # Checks that each result's 'price' value is in a valid numeric format by calling check_price function
@@ -159,6 +164,7 @@ def test_collected_produce_price():
     for result in results:
         assert result['price'] != ""
 
+
 def test_target_results():
     # Ensures that exactly 10 results are returned by search_items_API for 'laptop' from target
     product = 'dell'
@@ -167,12 +173,14 @@ def test_target_results():
     results = search_items_API(site, product, listLengthInd=num)
     assert len(results) == num
 
+
 def test_have_more_results():
     # Ensures that there have results are returned by search_items_API for 'laptop' from target
     product = 'dell'
     site = 'tg'
     results = search_items_API(site, product)
     assert len(results) > 0
+
 
 def check_price(price):
     # Removes the dollar sign from the price string and attempts to convert it to a float
@@ -184,6 +192,7 @@ def check_price(price):
     except ValueError:
         return False
 
+
 def test_checkprice_format():
     # Checks that each result's 'price' value is in a valid numeric format by calling check_price function
     product = 'dell'
@@ -191,8 +200,3 @@ def test_checkprice_format():
     results = search_items_API(site, product)
     for result in results:
         assert check_price(result['price'])
-
-
-
-
-
