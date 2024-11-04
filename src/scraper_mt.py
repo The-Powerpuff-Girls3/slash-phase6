@@ -24,8 +24,8 @@ class search(Thread):
         self.result = {}
         self.query = query
         self.config = config
-        super(search,self).__init__()
-        
+        super(search, self).__init__()
+
     def run(self):
         """Scrape the given config for a specific item
 
@@ -41,7 +41,7 @@ class search(Thread):
         products: list
             List of items returned from website
         """
-        
+
         self.query = form.formatSearchQuery(self.query)
         URL = self.config['url'] + self.query
 
@@ -200,7 +200,7 @@ def scrape(args, scrapers):
                 break
 
     i = 0
-    while i < len(scrapers) :
+    while i < len(scrapers):
         '''if scrapers[i] == 'amazon':
             t_az.join()
             i += 1
@@ -259,10 +259,9 @@ def scrape(args, scrapers):
             if i == len(scrapers):
                 break
 
-
     for sort_by in args['sort']:
         overall = form.sortList(overall, sort_by, args['des'])
 
     print('Before return time: ', datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
-    
+
     return overall

@@ -9,7 +9,7 @@ from threading import Thread
 from time import sleep
 
 try:
-    import src.formattr as form # Avoid path error when testing the script by if __name__ == '__main__'
+    import src.formattr as form  # Avoid path error when testing the script by if __name__ == '__main__'
 except ImportError:
     class form:
         @staticmethod
@@ -46,7 +46,7 @@ class search_ct(Thread):
         chrome_options.add_argument(f'user-agent={user_agent}')
         driver = webdriver.Chrome(options=chrome_options)
         return driver
-        
+
     def run(self):
         """Scrape the given config for a specific item
 
@@ -82,13 +82,13 @@ class search_ct(Thread):
             # Scroll down to the bottom
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             sleep(SCROLL_PAUSE_TIME)
-            
+
             # Check if the scroll height has changed
             new_height = driver.execute_script("return document.body.scrollHeight")
             if new_height == last_height:
                 break
             last_height = new_height
-        
+
         # Wait for product titles or price elements to load
         WebDriverWait(driver, 10).until(
             EC.presence_of_all_elements_located((By.CLASS_NAME, "price"))
@@ -99,7 +99,7 @@ class search_ct(Thread):
         results = []
         products = []
         soup = BeautifulSoup(driver.page_source, 'html.parser')
-        
+
         # Find all product containers
         product_elements = soup.find_all('div', class_='product-tile-set')
 
@@ -139,14 +139,14 @@ class search_ct(Thread):
                 'link': product_link,
                 'img_link': product_image
             })
-        
+
         # format product information
         for result in results:
             product = form.formatResultCostco(self.config['site'], result)
             products.append(product)
 
         return products
-    
+
 
 if __name__ == '__main__':
     query = 'laptop'
@@ -161,4 +161,3 @@ if __name__ == '__main__':
     results = scraper.result[:10] if scraper.result else []
     for result in results:
         print(result)
-

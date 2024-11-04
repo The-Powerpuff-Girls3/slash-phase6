@@ -16,6 +16,7 @@ import src.formattr as form
 # from src.configs import AMAZON, WALMART, COSTCO, BESTBUY, scrape_ebay, scrape_target
 from src.configs import WALMART, BESTBUY, scrape_ebay, scrape_target
 
+
 def httpsGet(URL):
     """makes HTTP called to the requested URL with custom headers
 
@@ -136,5 +137,5 @@ def scrape(args, scrapers):
         overall = form.sortList(overall, sort_by, args['des'])
 
     print('Before return time: ', datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
-    
+
     return overall

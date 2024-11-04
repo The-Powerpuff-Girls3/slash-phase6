@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
+# from sqlalchemy.orm import relationship
 from database import Base
 
 '''Creating a database model for users. '''
@@ -35,6 +35,7 @@ class Users(Base):
     hashed_password = Column(String)
     # list = relationship('Products', back_populates='users')
 
+
 '''
     The user table has the following columns:
     Columns
@@ -46,6 +47,7 @@ class Users(Base):
     product:str
         the product of the user
 '''
+
 
 class Products(Base):
     __tablename__ = "products"

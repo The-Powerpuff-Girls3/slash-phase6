@@ -30,6 +30,7 @@ sys.path.append(str(path_root))
 # local imports
 nest_asyncio.apply()
 
+
 # response type define
 class jsonScraps(BaseModel):
     timestamp: str
@@ -45,6 +46,7 @@ models.Base.metadata.create_all(bind=engine)
 
 app.include_router(auth.router)
 app.include_router(wishlist.router)
+
 
 @app.get("/")
 async def read_root():
@@ -85,7 +87,7 @@ async def search_items_API(
     '''
     # logging in file
     file = open("logger.txt", "a")
-    file.write('amazon query:' + str(item_name)+'\n')
+    file.write('amazon query:' + str(item_name) + '\n')
 
     # building argument
     args = {
@@ -122,7 +124,7 @@ async def search_items_API(
             dict_writer = csv.DictWriter(f, itemList[0].keys())
             dict_writer.writeheader()
             dict_writer.writerows(itemList)
-        return FileResponse('slash.csv', media_type='application/octet-stream', filename='slash_'+item_name+'.csv')
+        return FileResponse('slash.csv', media_type='application/octet-stream', filename='slash_' + item_name + '.csv')
     else:
         # No results
         return None

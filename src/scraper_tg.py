@@ -7,9 +7,9 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 import time
 import undetected_chromedriver as uc
 
-import undetected_chromedriver as uc
+
 try:
-    import src.formattr as form # Avoid path error when testing the script by if __name__ == '__main__'
+    import src.formattr as form  # Avoid path error when testing the script by if __name__ == '__main__'
 except ImportError:
     class form:
         @staticmethod
