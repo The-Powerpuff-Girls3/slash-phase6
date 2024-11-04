@@ -12,6 +12,7 @@ from pydantic import BaseModel
 import src.scraper_mt as scr
 import src.currency_conversion as cc
 
+
 # response type define
 class jsonScraps(BaseModel):
     timestamp: str
@@ -19,7 +20,8 @@ class jsonScraps(BaseModel):
     price: str
     website: str
     link: Optional[str] = None
-    
+
+
 def search_items_API(
     site: str,
     item_name: str,
@@ -47,7 +49,7 @@ def search_items_API(
     # building argument
     args = {
         'search': item_name,
-        'sort': 'pr' if order_by_col == 'price' else 'pr',  # placeholder TDB
+        'sort': ['pr'] if order_by_col == 'price' else [],  # placeholder TDB
         'des': reverse,  # placeholder TBD
         'num': listLengthInd,
         'relevant': relevant
@@ -55,8 +57,6 @@ def search_items_API(
 
     scrapers = []
 
-    # if site == 'az' or site == 'all':
-        # scrapers.append('amazon')
     if site == 'wm' or site == 'all':
         scrapers.append('walmart')
     if site == 'tg' or site == 'all':
@@ -67,6 +67,8 @@ def search_items_API(
         scrapers.append('bestbuy')
     if site == 'eb' or site == 'all':
         scrapers.append('ebay')
+    if site == 'ct' or site == 'all':
+        scrapers.append('costco')
 
     # calling scraper.scrape to fetch results
     itemList = scr.scrape(args=args, scrapers=scrapers)
@@ -76,7 +78,7 @@ def search_items_API(
     else:
         # No results
         return None
-    
+
+
 def currency_API(new_currency, price_list):
     return cc.convert(new_currency, price_list)
-

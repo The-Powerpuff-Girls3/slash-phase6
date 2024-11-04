@@ -26,7 +26,7 @@ secrets module is used to generate cryptographically strong random numbers suita
 SECRET_KEY = "KlgH6AzYDeZeGwD288to79I3vTHT8wp7"
 ALGORITHM = "HS256"
 
-'''CryptContext is a helper class for managing multiple password hashing algorithms. It provides a single interface for hashing 
+'''CryptContext is a helper class for managing multiple password hashing algorithms. It provides a single interface for hashing
 and verifying passwords using a variety of algorithms.'''
 
 bcrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -118,6 +118,7 @@ def create_access_token(username: str, user_id: int,
 
 '''get_current_user is a function that is used to get the current user.'''
 
+
 async def get_current_user(request: Request):
     try:
         token = request.cookies.get("access_token")
@@ -129,7 +130,7 @@ async def get_current_user(request: Request):
         if username is None or user_id is None:
             logout(request)
         return {"username": username, "id": user_id}
-    
+
     except JWTError:
         raise HTTPException(status_code=404, detail="Not Found")
 
@@ -145,11 +146,12 @@ async def login_for_access_token(request: Request, form_data: OAuth2PasswordRequ
     token = create_access_token(user.username,
                                 user.id,
                                 expires_delta=token_expires)
-    response = JSONResponse(content={'message': "Login Successful",'user': user.username, 'id': user.id})
+    response = JSONResponse(content={'message': "Login Successful", 'user': user.username, 'id': user.id})
     response.set_cookie(key="access_token", value=token, httponly=True)
     return response
 
 ''' logout is a function that is used to logout the user. It takes in the request as a parameter and deletes the access_token cookie.'''
+
 
 @router.get("/logout")
 async def logout(request: Request):
@@ -159,7 +161,7 @@ async def logout(request: Request):
     return response
 
 
-''' register_user is a function that is used to register the user. 
+''' register_user is a function that is used to register the user.
 It takes in the request, email, username, firstname, lastname, password, verify_password and db as parameters.
 It validates the username and email to check if they are already taken.
 Validation1 is a variable that is used to check if the username is already taken.
