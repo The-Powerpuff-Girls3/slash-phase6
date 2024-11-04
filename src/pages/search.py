@@ -97,7 +97,7 @@ def render_search():
         'Ebay': 'eb',
         'BestBuy': 'bb',
         'Target': 'tg',
-        'Costco': 'cc',
+        'Costco': 'ct',
         'All': 'all'
     }
 
