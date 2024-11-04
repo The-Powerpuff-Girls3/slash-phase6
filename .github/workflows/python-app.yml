@@ -35,10 +35,4 @@ jobs:
         pip install -r requirements.txt
     - name: Test with pytest
       run: |
-        pytest tests/test_api_bestbuy.py
-        pytest tests/test_api_ebay.py
-        pytest tests/test_api_costco.py
-        pytest tests/test_api_ebay.py
-        pytest tests/test_api_walmart.py
-        pytest tests/test_format*.py
-        pytest tests/test_url_shortener.py
+        pytest -sx --ignore=tests/test_api_target.py
