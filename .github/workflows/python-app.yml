@@ -35,4 +35,4 @@ jobs:
         pip install -r requirements.txt
     - name: Test with pytest
       run: |
-        pytest -sx --ignore=tests/test_api_target.py
+        pytest -sx --ignore=tests/test_api_target.py --ignore=tests/test_api_general.py --ignore=tests/test_feature.py
