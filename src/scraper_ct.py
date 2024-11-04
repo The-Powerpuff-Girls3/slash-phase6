@@ -8,12 +8,30 @@ from fake_useragent import UserAgent
 from threading import Thread
 from time import sleep
 
-import src.formattr as form
+try:
+    import src.formattr as form # Avoid path error when testing the script by if __name__ == '__main__'
+except ImportError:
+    class form:
+        @staticmethod
+        def formatSearchQuery(query):
+            # Basic query formatting (e.g., replace spaces with '+')
+            return query.replace(' ', '+')
+
+        @staticmethod
+        def formatResultCostco(site, result):
+            # Format the result dictionary as needed
+            return {
+                'site': site,
+                'title': result['title'],
+                'price': result['price'],
+                'link': result['link'],
+                'img_link': result['img_link']
+            }
 
 
 class search_ct(Thread):
     def __init__(self, query, config):
-        self.result: dict = None
+        self.result: list = None
         self.query = query
         self.config = config
         super(search_ct, self).__init__()
@@ -57,7 +75,7 @@ class search_ct(Thread):
 
     # Function to scroll and wait for products to load
     def load_full_page(self, driver):
-        SCROLL_PAUSE_TIME = 2
+        SCROLL_PAUSE_TIME = 2.5
         last_height = driver.execute_script("return document.body.scrollHeight")
 
         while True:
@@ -65,16 +83,16 @@ class search_ct(Thread):
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             sleep(SCROLL_PAUSE_TIME)
             
-            # Wait for product titles or price elements to load
-            WebDriverWait(driver, 10).until(
-                EC.presence_of_all_elements_located((By.CLASS_NAME, "price"))
-            )
-            
             # Check if the scroll height has changed
             new_height = driver.execute_script("return document.body.scrollHeight")
             if new_height == last_height:
                 break
             last_height = new_height
+        
+        # Wait for product titles or price elements to load
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_all_elements_located((By.CLASS_NAME, "price"))
+        )
 
     # Scrape product information
     def scrape_products(self, driver):
