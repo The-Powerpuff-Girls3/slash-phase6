@@ -135,10 +135,6 @@ if __name__ == '__main__':
     config = {
         'url': 'https://www.costco.com/CatalogSearch?dept=All&keyword=',
         'site': 'costco',
-        'title_indicator': ['span', {'class': 'description'}],
-        'price_indicator': ['div', {'class': 'price'}],
-        'link_indicator': ['a', {'class': 'product-link'}],
-        'img_indicator': ['img', {'class': 'product-image'}]
     }
     scraper = search_ct(query, config)
     scraper.start()

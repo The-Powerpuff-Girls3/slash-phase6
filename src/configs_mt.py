@@ -77,6 +77,10 @@ TARGET = {
     'img_indicator': 'div.relative.overflow-hidden img'
 }
 
+TARGET_CONFIG = {
+    'url': 'https://www.target.com/s?searchTerm=',
+    'site': 'target',
+}
 
 # individual scrapers
 class scrape_target(Thread):
