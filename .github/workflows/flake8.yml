@@ -2,9 +2,9 @@ name: Lint with Flake8
 
 on:
   push:
-    branches: [ "test/workflow_" ]
+    branches: [ "test/workflow" ]
   pull_request:
-    branches: [ "test/workflow_" ]
+    branches: [ "test/workflow" ]
 
 permissions:
   contents: read
@@ -26,4 +26,4 @@ jobs:
           pip install -r requirements.txt
       - name: Run Flake8
         run: |
-          flake8 src tests
+          flake8 src tests --statistics
