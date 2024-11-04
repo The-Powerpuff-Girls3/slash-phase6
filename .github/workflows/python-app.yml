@@ -5,9 +5,15 @@ name: Python application
 
 on:
   push:
-    branches: [ "dev" ]
+    branches:
+      - main
+      - dev
+      - test/workflow
   pull_request:
-    branches: [ "dev" ]
+    branches:
+      - main
+      - dev
+      - test/workflow
 
 permissions:
   contents: read
@@ -29,4 +35,10 @@ jobs:
         pip install -r requirements.txt
     - name: Test with pytest
       run: |
-        pytest -sx
+        pytest tests/test_api_bestbuy.py
+        pytest tests/test_api_ebay.py
+        pytest tests/test_api_costco.py
+        pytest tests/test_api_ebay.py
+        pytest tests/test_api_walmart.py
+        pytest tests/test_format*.py
+        pytest tests/test_url_shortener.py
