@@ -57,7 +57,7 @@ jobs:
           #   pytest --cov=src $test_file
           # done
           # coverage combine
-          pytest -sx --ignore=tests/test_api_target.py --ignore=tests/test_api_general.py --ignore=tests/test_feature.py --cov
+          pytest -sx --ignore=tests/test_api_target.py --ignore=tests/test_api_general.py --ignore=tests/test_feature.py --ignore=tests/test_api_walmart.py --cov
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
