@@ -12,7 +12,8 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from src.main_streamlit import search_items_API
-    
+
+
 def test_api_general_sort():
     # Tests the sorting functionality of search_items_API with ascending price order.
     product = 'laptop'
@@ -20,7 +21,8 @@ def test_api_general_sort():
     results = search_items_API(site, product, order_by_col='price')
     prices = [float(result['price'].replace('$', '').replace(',', '')) for result in results]
     assert prices == sorted(prices)
-    
+
+
 def test_api_general_reverse_sort():
     # Tests the sorting functionality of search_items_API with descending price order.
     product = 'laptop'
