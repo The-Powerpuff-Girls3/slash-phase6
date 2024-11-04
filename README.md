@@ -183,9 +183,9 @@ streamlit run slash_user_interface.py
    - **Description**: The frontend has been redesigned to improve user experience with intuitive navigation, highlighted deals, and a clear wishlist display.
    - **Functionality**: Users enjoy a visually appealing interface with improved navigation, deal highlights, and an organized wishlist, making the application smoother and more enjoyable to use.
 
-<img src = https://github.com/DFY-NCSU/slash-phase6/blob/main/media/exp1.png>
-<img src = https://github.com/DFY-NCSU/slash-phase6/blob/main/media/exp2.png>
-<img src = https://github.com/DFY-NCSU/slash-phase6/blob/main/media/exp3.png>
+<img src = https://github.com/DFY-NCSU/slash-phase6/blob/dev/media/exp1.png>
+<img src = https://github.com/DFY-NCSU/slash-phase6/blob/dev/media/exp2.png>
+<img src = https://github.com/DFY-NCSU/slash-phase6/blob/dev/media/exp3.png>
 
 :golf: Future Roadmap
 ---
