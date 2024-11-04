@@ -14,8 +14,10 @@ from threading import Thread
 # local imports
 import src.formattr as form
 # from src.configs_mt import AMAZON, WALMART, COSTCO, BESTBUY, scrape_ebay, scrape_target
-from src.configs_mt import WALMART, BESTBUY, COSTCO, scrape_ebay, scrape_target
+from src.configs_mt import WALMART, BESTBUY, COSTCO, TARGET_CONFIG, scrape_ebay
 from src.scraper_ct import search_ct
+from src.scraper_tg import search_target
+
 
 class search(Thread):
     def __init__(self, query, config):
@@ -181,7 +183,7 @@ def scrape(args, scrapers):
             if i == len(scrapers):
                 break
         if scrapers[i] == 'target':
-            t_tg = scrape_target(query)
+            t_tg = search_target(query, TARGET_CONFIG)
             t_tg.start()
             i += 1
             if i == len(scrapers):
