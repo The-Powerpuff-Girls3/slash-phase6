@@ -81,6 +81,7 @@ def test_api_ebay7():
     for result in results:
         assert 'img_link' in result
 
+
 def test_api_ebay8():
     product = 'lenovo'
     site = 'eb'
