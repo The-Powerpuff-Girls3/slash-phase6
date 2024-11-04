@@ -77,7 +77,7 @@ def render_search():
         product = st.text_input('Enter the product item name')
 
     with col2:
-        website = st.selectbox('Select the website', ('Walmart', 'Ebay', 'BestBuy', 'Target', 'All'))
+        website = st.selectbox('Select the website', ('Walmart', 'Ebay', 'BestBuy', 'Target', 'Costco', 'All'))
 
     # Create a 3-column layout
     colu1, colu2, colu3 = st.columns(3)
@@ -97,6 +97,7 @@ def render_search():
         'Ebay': 'eb',
         'BestBuy': 'bb',
         'Target': 'tg',
+        'Costco': 'cc',
         'All': 'all'
     }
 
