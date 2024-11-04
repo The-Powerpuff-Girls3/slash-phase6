@@ -90,7 +90,7 @@ datasets, Slash is the tool for you.
 :movie_camera: Checkout our video
 ---
 
-[[https://youtu.be/dH4LmxtkDOA]](https://youtu.be/dH4LmxtkDOA)
+[[bilibili]]([https://youtu.be/dH4LmxtkDOA](https://www.bilibili.com/video/BV1sZDJYYEuX))
 
 
 ---
