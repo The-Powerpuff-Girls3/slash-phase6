@@ -148,5 +148,5 @@ def test_api_costco_collected_produce_order():
     product = 'laptop'
     site = 'ct'
     result = search_items_API(site, product, order_by_col='price')
-    prices = [item['price'] for item in result]
+    prices = [float(item['price'].replace('$', '').replace(',', '')) for item in result]
     assert all(prices[i] <= prices[i + 1] for i in range(len(prices) - 1))
