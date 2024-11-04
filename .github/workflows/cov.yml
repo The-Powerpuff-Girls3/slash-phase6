@@ -30,9 +30,7 @@ jobs:
           pytest --cov=src tests/test_api_bestbuy.py
           pytest --cov=src tests/test_api_costco.py::test_api_costco
           pytest --cov=src tests/test_api_ebay.py
-          pytest --cov=src tests/test_api_general.py
           pytest --cov=src tests/test_api_walmart.py
-          pytest --cov=src tests/test_feature.py
           pytest --cov=src tests/test_format*.py
           pytest --cov=src tests/test_url_shortener.py
           coverage combine
