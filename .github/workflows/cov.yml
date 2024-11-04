@@ -38,10 +38,10 @@ jobs:
           # coverage xml
           coverage erase
           tests=(
-            # "tests/test_api_bestbuy.py"
-            # "tests/test_api_costco.py::test_api_costco"
+            "tests/test_api_bestbuy.py"
+            "tests/test_api_costco.py::test_api_costco"
             "tests/test_api_ebay.py"
-            # "tests/test_api_walmart.py"
+            "tests/test_api_walmart.py"
             "tests/test_format*.py"
             "tests/test_url_shortener.py"
           )
