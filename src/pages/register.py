@@ -8,6 +8,7 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 import streamlit as st
 import requests
 
+
 def render_register():
     API_URL = "http://127.0.0.1:5050/auth"
 
@@ -51,13 +52,12 @@ def render_register():
                     response_data = response.json()
                     if response_data.get('message') != "User successfully created":
                         st.warning(response_data['message'])
-
                     else:
                         st.success("Registration Successful, Login to start creating your wishlist")
-                        
             else:
                 st.error("Passwords do not match")
         else:
             st.warning("Please enter all details")
+
 
 render_register()

@@ -10,11 +10,11 @@ from datetime import datetime
 import requests
 from ebaysdk.finding import Connection
 from threading import Thread
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 
 # local imports
 from src.formattr import formatTitle
-import json
+# import json
 
 # configs
 WALMART = {
@@ -81,6 +81,7 @@ TARGET_CONFIG = {
     'url': 'https://www.target.com/s?searchTerm=',
     'site': 'target',
 }
+
 
 # individual scrapers
 class scrape_target(Thread):

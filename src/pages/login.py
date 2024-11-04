@@ -1,6 +1,7 @@
 import requests
 import streamlit as st
-from src.pages.wishlist import render_wishlist
+# from src.pages.wishlist import render_wishlist
+
 
 def render_login():
 
@@ -40,5 +41,3 @@ def render_login():
                         st.error("Login failed. Please check your credentials.")
                 else:
                     st.warning("Please enter both username and password.")
-
-
