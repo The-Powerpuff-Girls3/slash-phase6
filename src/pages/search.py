@@ -1,4 +1,4 @@
-from locale import currency
+# from locale import currency
 import streamlit as st
 import sys
 sys.path.append('../')
@@ -8,53 +8,60 @@ from src.url_shortener import shorten_url
 import re
 import requests
 
+
 def extract_and_format_numbers(input_string):
     # Use regular expressions to find all numbers in the input string
     numbers = re.findall(r'\d+\.\d+|\d+', input_string)
 
     if len(numbers) == 4:
         # Place dots between numbers
-        formatted_output = '$'+ numbers[0] + '.' + numbers[1]+'.'+numbers[2]+'.'+numbers[3]
+        formatted_output = '$' + numbers[0] + '.' + numbers[1] + '.' + numbers[2] + '.' + numbers[3]
         return formatted_output
     elif len(numbers) == 3:
         # Place dots between numbers
-        formatted_output = '$'+ numbers[0] + '.' + numbers[1]+'.'+numbers[2]
+        formatted_output = '$' + numbers[0] + '.' + numbers[1] + '.' + numbers[2]
         return formatted_output
     elif len(numbers) == 2:
         # Take the first number and add a decimal point before the second number
-        formatted_output = '$'+ numbers[0] + '.' + numbers[1]
+        formatted_output = '$' + numbers[0] + '.' + numbers[1]
         return formatted_output
     elif len(numbers) == 1:
         # If there's only one number, return it as is
-        return '$'+ numbers[0]
+        return '$' + numbers[0]
     else:
         return "No valid numbers found in the input."
+
 
 def ensure_https_link(link_text):
     if link_text.startswith("http://") or link_text.startswith("https://"):
         return link_text
     else:
         return "https://" + link_text
-    
+
+
 def path_to_image_html(path):
     return '<img src="' + path + '" width="60" >'
 
+
 def path_to_url_html(path):
-    return '<a href="'+ ensure_https_link(path) +'" target="_blank">Product Link</a>'
+    return '<a href="' + ensure_https_link(path) + '" target="_blank">Product Link</a>'
+
 
 @st.cache_data
 def convert_df_to_html(input_df):
-     # IMPORTANT: Cache the conversion to prevent computation on every rerun
-     return input_df.to_html(escape=False, formatters=dict(Image=path_to_image_html,Link=path_to_url_html))
+    # IMPORTANT: Cache the conversion to prevent computation on every rerun
+    return input_df.to_html(escape=False, formatters=dict(Image=path_to_image_html, Link=path_to_url_html))
+
 
 @st.cache_data
 def convert_df_to_csv(df):
     # IMPORTANT: Cache the conversion to prevent computation on every rerun
     return df.to_csv().encode('utf-8')
 
+
 def render_search():
     def callback():
-        st.session_state.button_clicked = True 
+        st.session_state.button_clicked = True
 
     if "button_clicked" not in st.session_state:
         st.session_state.button_clicked = False
@@ -84,11 +91,11 @@ def render_search():
 
     with colu1:
         currency = st.selectbox('Choose a currency', ('USD($)', 'EUR(€)', 'JPY(¥)', 'INR(₹)', 'GBP(£)', 'AUD($)', 'CAD($)'))
-        
+
     with colu2:
         Min_price = st.number_input('Minimum price', min_value=0, value=0)
         button = st.button('Search', on_click=callback)
-        
+
     with colu3:
         Max_price = st.number_input('Maximum price', min_value=0, value=10000)
 
@@ -102,7 +109,7 @@ def render_search():
     }
 
     add = False
-    if (button or st.session_state.button_clicked ) and product and website and currency:
+    if (button or st.session_state.button_clicked) and product and website and currency:
         results = search_items_API(website_dict[website], product)
         add = True
 
@@ -110,16 +117,16 @@ def render_search():
         url = []
         price = []
         site = []
-        image_url = []        
+        image_url = []
 
         if results is not None:
             for result in results:
                 result['price'] = re.sub(r'\.(?=.*\.)', "", extract_and_format_numbers(result['price']).replace(extract_and_format_numbers(result['price'])[0], "", 1))
 
             results.sort(key=lambda x: (float(x['price'])))
-            
+
             for result in results:
-                if result != {} and result['price'] != '' and float(result['price'])>=Min_price and float(result['price'])<=Max_price:
+                if result != {} and result['price'] != '' and float(result['price']) >= Min_price and float(result['price']) <= Max_price:
                     description.append(result['title'])
                     url.append(result['link'])
                     site.append(result['website'])
@@ -127,10 +134,10 @@ def render_search():
                     image_url.append(result['img_link'])
 
         if len(price):
-            if(currency != "USD($)"):
+            if (currency != "USD($)"):
                 price = currency_API(currency, price)
-            dataframe = pd.DataFrame({'Description': description, 'Price': price, 'Link': url, 'Website': site, 'Image':image_url})
-            st.success(' Displaying \"'+ product +'\" from \"'+ website +'\" with price range - ['+str(Min_price)+', '+str(Max_price)+ ']'+' in \"'+ currency+'\"', icon="✅")
+            dataframe = pd.DataFrame({'Description': description, 'Price': price, 'Link': url, 'Website': site, 'Image': image_url})
+            st.success(' Displaying \"' + product + '\" from \"' + website + '\" with price range - [' + str(Min_price) + ', ' + str(Max_price) + ']' + ' in \"' + currency + '\"', icon="✅")
             st.markdown("<div class='neon'><h2>RESULTS</h2></div>", unsafe_allow_html=True)
 
             st.write("[Cheapest product link](" + shorten_url(results[0]['link'].split('\\')[-1]) + ")")
@@ -153,8 +160,8 @@ def render_search():
 
         else:
             st.error('Sorry, the website does not have similar products')
-    
-    if (button or st.session_state.button_clicked ) and add:
+
+    if (button or st.session_state.button_clicked) and add:
         st.markdown("<h1 style='text-align: center; color: #1DC5A9;'>RESULT</h1>", unsafe_allow_html=True)
 
         st.write("1. You must first register and then login to start saving wishlist.")

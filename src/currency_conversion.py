@@ -1,7 +1,9 @@
 from currency_converter import CurrencyConverter
 
+
 def extractValue(price):
     return price.replace("$", "")
+
 
 def convert(new_currency, price_list):
     c = CurrencyConverter()

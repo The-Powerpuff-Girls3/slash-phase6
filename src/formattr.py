@@ -41,9 +41,9 @@ def formatResult(website, titles, prices, links, img_link):
         "img_link": img_link,
         "website": website,
     }
-    if website=='walmart':
-        if link[0:4]=='http':
-            product['link']=f'{link}'
+    if website == 'walmart':
+        if link[0:4] == 'http':
+            product['link'] = f'{link}'
     if website == 'costco':
         product['link'] = f'{link}'
     return product
@@ -66,7 +66,7 @@ def formatResultBestBuy(website, titles, prices, links, img_link):
         link = links[0].get('href', '')
     else:
         link = ''
-    
+
     # Process image link
     img_link = img_link[0]['src'] if hasattr(img_link[0], 'get') else img_link if isinstance(img_link, str) else ''
     if prices:
@@ -80,9 +80,9 @@ def formatResultBestBuy(website, titles, prices, links, img_link):
         "img_link": img_link,
         "website": website,
     }
-    if website=='walmart':
-        if link[0:4]=='http':
-            product['link']=f'{link}'
+    if website == 'walmart':
+        if link[0:4] == 'http':
+            product['link'] = f'{link}'
     if website == 'costco':
         product['link'] = f'{link}'
     return product
@@ -92,7 +92,7 @@ def formatResultCostco(website, product):
     """
     This function formats the results from the Costco scraper. Since we use different operation flow for Costco,
     we need to format the results differently.
-    param: 
+    param:
         website: str: The website name
         product: dict: The product dictionary contains parts of product information
     return:
@@ -148,7 +148,7 @@ def formatTitle(title):
     The formatTitle function formats titles extracted from the scraped HTML code.
     """
     title = html.unescape(title)
-    if(len(title) > 40):
+    if (len(title) > 40):
         return title[:40] + "..."
     return title
 
