@@ -30,4 +30,4 @@ def test_api_general_all_sites():
     results_sites = set()
     for result in results:
         results_sites.add(result['website'])
-    assert results_sites == {'walmart', 'ebay', 'bestbuy'}
+    assert results_sites == {'walmart', 'ebay', 'bestbuy', 'target', 'costco'}

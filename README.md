@@ -2,6 +2,12 @@
 
 [![DOI](https://zenodo.org/badge/882147579.svg)](https://doi.org/10.5281/zenodo.14027393)
 
+[![Flake8 Lint](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml)
+[![Syntax Check](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/main.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/syntax.yml)
+[![Python Style Checker](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/style.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/style.yml)
+[![codecov](https://codecov.io/gh/DFY-NCSU/slash-phase6/branch/test/workflow/graph/badge.svg?token=oJrKEnEGwP)](https://codecov.io/gh/DFY-NCSU/slash-phase6/tree/test/workflow)
+
+
 [![codecov](https://codecov.io/gh/SE23-Team44/slash-phase4/branch/main/graph/badge.svg?token=9YO9QKQZPJ)](https://codecov.io/gh/SE23-Team44/slash-phase4)
 [![GitHub Release](https://img.shields.io/badge/release-v6.0.11.1-blue)](https://github.com/DFY-NCSU/slash-phase6)
 [![Build Status](https://app.travis-ci.com/rohan22shah/slash-phase3.svg?branch=main)](https://app.travis-ci.com/rohan22shah/slash-phase3)
