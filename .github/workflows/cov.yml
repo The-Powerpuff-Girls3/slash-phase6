@@ -34,7 +34,7 @@ jobs:
           # pytest --cov=src --cov-append tests/test_api_walmart.py
           # pytest --cov=src --cov-append tests/test_format*.py
           # pytest --cov=src --cov-append tests/test_url_shortener.py
-          coverage combine
+          # coverage combine
           coverage xml
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
