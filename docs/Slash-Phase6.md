@@ -8,6 +8,9 @@ In today’s e-commerce landscape, consumers face an overwhelming number of choi
 
 Slash is a web application that scrapes product information from popular e-commerce websites such as Walmart, Target, BestBuy, and eBay. Users can search for specific products on Slash, and the system will return price information from each site, allowing users to compare and find the most favorable deals. This project was developed by a team of students at North Carolina State University (NCSU) with the aim of providing consumers an efficient and convenient shopping assistant tool.
 
+### Checkout our video
+[Slash Presentation](https://www.bilibili.com/video/BV1gXDWYpEUQ/?spm_id_from=333.999.0.0)
+
 ### Steps for Execution
 
 1. **Clone the Repository**:
