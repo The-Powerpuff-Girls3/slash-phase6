@@ -105,6 +105,7 @@ def test_api_walmart9():
 
 
 def test_api_walmart_collected_produce_price():
+    # Validates that each result's 'price' field has a valid numeric format
     product = 'laptop'
     site = 'wm'
     results = search_items_API(site, product)
@@ -115,6 +116,7 @@ def test_api_walmart_collected_produce_price():
 
 
 def test_api_walmart_collected_produce_title():
+    # Ensures that each result's 'title' field is not an empty string
     product = 'laptop'
     site = 'wm'
     results = search_items_API(site, product)
@@ -125,6 +127,7 @@ def test_api_walmart_collected_produce_title():
 
 
 def test_api_walmart_collected_produce_link():
+    # Verifies that each result's 'link' field is a valid URL starting with 'http', 'https', or 'www'
     product = 'laptop'
     site = 'wm'
     results = search_items_API(site, product)
@@ -136,6 +139,7 @@ def test_api_walmart_collected_produce_link():
 
 
 def test_api_walmart_collected_produce_img_link():
+    # Ensures that each result's 'img_link' field is a valid URL starting with 'http', 'https', or 'www'
     product = 'laptop'
     site = 'wm'
     results = search_items_API(site, product)
@@ -147,6 +151,7 @@ def test_api_walmart_collected_produce_img_link():
 
 
 def test_api_walmart_collected_produce_timestamp():
+    # Confirms that each result's 'timestamp' field is not an empty string
     product = 'laptop'
     site = 'wm'
     results = search_items_API(site, product)

@@ -1,6 +1,5 @@
 import requests
 import streamlit as st
-# from src.pages.wishlist import render_wishlist
 
 
 def render_login():

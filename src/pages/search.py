@@ -1,12 +1,14 @@
 # from locale import currency
-import streamlit as st
 import sys
-sys.path.append('../')
+import re
+
+import requests
 import pandas as pd
+import streamlit as st
+
+sys.path.append('../')
 from src.main_streamlit import currency_API, search_items_API
 from src.url_shortener import shorten_url
-import re
-import requests
 
 
 def extract_and_format_numbers(input_string):
@@ -217,4 +219,3 @@ def render_search():
         <p>Contributors: Harika, Lakshmi, Kavya, Tanmaiyeet</p>
         </div>
         """
-        # st.markdown(footer, unsafe_allow_html=True)

@@ -1,12 +1,14 @@
+from threading import Thread
+from time import sleep
+
+from bs4 import BeautifulSoup
+from fake_useragent import UserAgent
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from bs4 import BeautifulSoup
-from fake_useragent import UserAgent
-from threading import Thread
-from time import sleep
+
 
 try:
     import src.formattr as form  # Avoid path error when testing the script by if __name__ == '__main__'
@@ -157,7 +159,6 @@ if __name__ == '__main__':
     scraper = search_ct(query, config)
     scraper.start()
     scraper.join()
-    # print(scraper.result)
     results = scraper.result[:10] if scraper.result else []
     for result in results:
         print(result)

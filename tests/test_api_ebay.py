@@ -14,6 +14,8 @@ from src.main_streamlit import search_items_API
 
 
 def check_price(price):
+    # Removes the dollar sign and commas from the price string and converts it to a float
+    # Returns True if conversion is successful, False if it raises a ValueError (indicating invalid format)
     price = price.replace('$', '').replace(',', '')
     try:
         price = float(price)
@@ -23,6 +25,7 @@ def check_price(price):
 
 
 def test_api_ebay():
+    # Verifies that the search_items_API function returns a result (non-None) when querying 'lenovo' on eBay ('eb')
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -30,6 +33,7 @@ def test_api_ebay():
 
 
 def test_api_ebay1():
+    # Checks that the search_items_API function returns a non-empty list of results for 'lenovo' from eBay
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -37,6 +41,7 @@ def test_api_ebay1():
 
 
 def test_api_ebay2():
+    # Ensures that the specified number of results (9) is returned by search_items_API for 'lenovo' from eBay
     product = 'lenovo'
     site = 'eb'
     num = 9
@@ -45,6 +50,7 @@ def test_api_ebay2():
 
 
 def test_api_ebay3():
+    # Confirms that the results returned by search_items_API are in list format
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -52,6 +58,7 @@ def test_api_ebay3():
 
 
 def test_api_ebay4():
+    # Checks that each item in the result list is a dictionary
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -59,6 +66,7 @@ def test_api_ebay4():
 
 
 def test_api_ebay5():
+    # Verifies that each result dictionary contains a 'price' key
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -67,6 +75,7 @@ def test_api_ebay5():
 
 
 def test_api_ebay6():
+    # Ensures that each result dictionary contains a 'link' key
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -75,6 +84,7 @@ def test_api_ebay6():
 
 
 def test_api_ebay7():
+    # Verifies that each result dictionary contains an 'img_link' key for the product image URL
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -83,6 +93,7 @@ def test_api_ebay7():
 
 
 def test_api_ebay8():
+    # Confirms that each result dictionary includes a 'title' key
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -91,6 +102,7 @@ def test_api_ebay8():
 
 
 def test_api_ebay9():
+    # Checks that each result dictionary contains a 'timestamp' key
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -99,6 +111,7 @@ def test_api_ebay9():
 
 
 def test_api_ebay_collected_produce_price():
+    # Validates that each result's 'price' field has a valid numeric format
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -109,6 +122,7 @@ def test_api_ebay_collected_produce_price():
 
 
 def test_api_ebay_collected_produce_title():
+    # Ensures that each result's 'title' field is not an empty string
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -119,6 +133,7 @@ def test_api_ebay_collected_produce_title():
 
 
 def test_api_ebay_collected_produce_link():
+    # Verifies that each result's 'link' field is a valid URL starting with 'http', 'https', or 'www'
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -130,6 +145,7 @@ def test_api_ebay_collected_produce_link():
 
 
 def test_api_ebay_collected_produce_img_link():
+    # Ensures that each result's 'img_link' field is a valid URL starting with 'http', 'https', or 'www'
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)
@@ -141,6 +157,7 @@ def test_api_ebay_collected_produce_img_link():
 
 
 def test_api_ebay_collected_produce_timestamp():
+    # Confirms that each result's 'timestamp' field is not an empty string
     product = 'lenovo'
     site = 'eb'
     results = search_items_API(site, product)

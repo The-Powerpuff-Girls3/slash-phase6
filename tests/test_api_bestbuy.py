@@ -162,6 +162,8 @@ def test_api_bestbuy_collected_produce_timestamp():
 
 
 def test_api_bestbuy_null():
+    # Tests the behavior of search_items_API when given an empty product string
+    # Expects the function to return None, indicating no results for empty input
     product = ''
     site = 'bb'
     results = search_items_API(site, product)
@@ -169,6 +171,8 @@ def test_api_bestbuy_null():
 
 
 def test_api_bestbuy_mojibake():
+    # Tests the behavior of search_items_API when given a product string with special characters
+    # Expects the function to return None, indicating no results for invalid input
     product = '!@#$%^&*()'
     site = 'bb'
     results = search_items_API(site, product)
