@@ -1,5 +1,4 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
-# from sqlalchemy.orm import relationship
 from database import Base
 
 '''Creating a database model for users. '''
@@ -33,11 +32,10 @@ class Users(Base):
     first_name = Column(String)
     last_name = Column(String)
     hashed_password = Column(String)
-    # list = relationship('Products', back_populates='users')
 
 
 '''
-    The user table has the following columns:
+    The product table has the following columns:
     Columns
     ----------
     product_id: int
@@ -55,4 +53,3 @@ class Products(Base):
     product_id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey('users.id'), index=True)
     product = Column(String)
-    # user = relationship('Users', back_populates='products')

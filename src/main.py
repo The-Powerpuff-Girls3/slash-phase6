@@ -6,16 +6,17 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 """
 
 # package imports
-import uvicorn
-from typing import Optional
-from typing import List
-from fastapi import FastAPI
-from fastapi.responses import RedirectResponse
-from fastapi.responses import FileResponse
-from pydantic import BaseModel
-from pathlib import Path
 import csv
+import sys
+from pathlib import Path
+from typing import List, Optional
+
 import nest_asyncio
+import uvicorn
+from fastapi import FastAPI
+from fastapi.responses import FileResponse, RedirectResponse
+from pydantic import BaseModel
+
 import models
 from database import engine
 from routers import auth
@@ -23,11 +24,9 @@ from routers import wish_list as wishlist
 import src.scraper_mt as scr
 
 
-import sys
 path_root = Path(__file__).parents[1]
 sys.path.append(str(path_root))
 
-# local imports
 nest_asyncio.apply()
 
 

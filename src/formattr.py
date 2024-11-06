@@ -5,9 +5,9 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 @author: Slash
 """
 
-from datetime import datetime
 import math
 import html
+from datetime import datetime
 
 """
 The formatter module focuses on processing raw text and returning it in
