@@ -97,6 +97,7 @@ def test_api_costco8():
 
 
 def test_api_costco_collected_produce_price():
+    # Checks that each item in the result list has a valid 'price' format by calling the check_price function
     product = 'laptop'
     site = 'ct'
     result = search_items_API(site, product)
@@ -105,6 +106,7 @@ def test_api_costco_collected_produce_price():
 
 
 def test_api_costco_collected_produce_title():
+    # Verifies that each item in the result list has a non-empty 'title' field
     product = 'laptop'
     site = 'ct'
     result = search_items_API(site, product)
@@ -113,6 +115,7 @@ def test_api_costco_collected_produce_title():
 
 
 def test_api_costco_collected_produce_link():
+    # Ensures that each item in the result list has a non-empty 'link' field
     product = 'laptop'
     site = 'ct'
     result = search_items_API(site, product)
@@ -121,6 +124,7 @@ def test_api_costco_collected_produce_link():
 
 
 def test_api_costco_collected_produce_img_link():
+    # Checks that each item in the result list has a non-empty 'img_link' field
     product = 'laptop'
     site = 'ct'
     result = search_items_API(site, product)
@@ -129,6 +133,7 @@ def test_api_costco_collected_produce_img_link():
 
 
 def test_api_costco_collected_produce_website():
+    # Confirms that each item in the result list has the 'website' field set to 'costco'
     product = 'laptop'
     site = 'ct'
     result = search_items_API(site, product)
@@ -137,6 +142,7 @@ def test_api_costco_collected_produce_website():
 
 
 def test_api_costco_collected_produce_timestamp():
+    # Ensures that each item in the result list has a non-empty 'timestamp' field
     product = 'laptop'
     site = 'ct'
     result = search_items_API(site, product)
@@ -145,6 +151,7 @@ def test_api_costco_collected_produce_timestamp():
 
 
 def test_api_costco_collected_produce_order():
+    # Verifies that the items in the result list are sorted in ascending order by 'price'
     product = 'laptop'
     site = 'ct'
     result = search_items_API(site, product, order_by_col='price')

@@ -34,32 +34,8 @@ jobs:
           pip install pytest-cov
       - name: Test with pytest and generate coverage report
         run: |
-          # pytest --cov=src --cov-report=xml --cov-append tests/test_api_bestbuy.py
-          # pytest --cov=src --cov-report=xml --cov-append tests/test_api_ebay.py
-          # pytest --cov=src --cov-append tests/test_api_costco.py::test_api_costco
-          # pytest --cov=src --cov-append tests/test_api_ebay.py
-          # pytest --cov=src --cov-append tests/test_api_walmart.py
-          # pytest --cov=src --cov-append tests/test_format*.py
-          # pytest --cov=src --cov-append tests/test_url_shortener.py
-          # coverage combine
-          # coverage xml
-          # coverage erase
-          # tests=(
-          #   "tests/test_api_bestbuy.py"
-          #   "tests/test_api_costco.py::test_api_costco"
-          #   "tests/test_api_ebay.py"
-          #   "tests/test_api_walmart.py"
-          #   "tests/test_format*.py"
-          #   "tests/test_url_shortener.py"
-          # )
-          # for test_file in "${tests[@]}"; do
-          #   export COVERAGE_FILE=".coverage.$(echo $test_file | tr '/' '_')"
-          #   pytest --cov=src $test_file
-          # done
-          # coverage combine
           pytest -sx --ignore=tests/test_api_target.py --ignore=tests/test_api_general.py --ignore=tests/test_feature.py --ignore=tests/test_api_walmart.py --cov
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          # files: ./coverage.xml 

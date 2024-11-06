@@ -9,7 +9,7 @@ from typing import Optional
 from pydantic import BaseModel
 
 # local imports
-import src.scraper_mt as scr
+import src.scraper_mt as ssm
 import src.currency_conversion as cc
 
 
@@ -42,15 +42,12 @@ def search_items_API(
     itemListJson: JSON List
         list of search results as JSON List
     '''
-    # logging in file
-    # file = open("logger.txt", "a")
-    # file.write('amazon query:' + str(item_name)+'\n')
 
     # building argument
     args = {
         'search': item_name,
-        'sort': ['pr'] if order_by_col == 'price' else [],  # placeholder TDB
-        'des': reverse,  # placeholder TBD
+        'sort': ['pr'] if order_by_col == 'price' else [],
+        'des': reverse,
         'num': listLengthInd,
         'relevant': relevant
     }
@@ -61,8 +58,6 @@ def search_items_API(
         scrapers.append('walmart')
     if site == 'tg' or site == 'all':
         scrapers.append('target')
-    # if site == 'cc' or site == 'all':
-        # scrapers.append('costco')
     if site == 'bb' or site == 'all':
         scrapers.append('bestbuy')
     if site == 'eb' or site == 'all':
@@ -71,9 +66,8 @@ def search_items_API(
         scrapers.append('costco')
 
     # calling scraper.scrape to fetch results
-    itemList = scr.scrape(args=args, scrapers=scrapers)
+    itemList = ssm.scrape(args=args, scrapers=scrapers)
     if not export and len(itemList) > 0:
-        # file.close()
         return itemList
     else:
         # No results

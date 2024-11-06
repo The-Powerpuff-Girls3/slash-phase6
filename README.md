@@ -204,8 +204,9 @@ streamlit run slash_user_interface.py
 
 
 ## 🙏 Acknowledgements <a name="Acknowledgement"></a>
-We would like to thank Professor Dr Timothy Menzies for helping us understand the process of Maintaining a good Software Engineering project. We would also like to thank the teaching assistants for their support throughout the project.
-We would also like to extend our gratitude to previous group: https://github.com/MeryHarikaG/slash-phase5
+<!-- We would like to thank Professor Dr Timothy Menzies for helping us understand the process of Maintaining a good Software Engineering project. We would also like to thank the teaching assistants for their support throughout the project. -->
+We would like to thank the teaching assistants for their support throughout the project.
+Some code in our project is modified from this [repo](https://github.com/MeryHarikaG/slash-phase5).
 
 :email: Support
 ---

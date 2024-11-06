@@ -5,16 +5,14 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 @author: Slash
 """
 
-# package imports
-from datetime import datetime
 import requests
-from ebaysdk.finding import Connection
 from threading import Thread
-# from bs4 import BeautifulSoup
+from datetime import datetime
 
-# local imports
+from ebaysdk.finding import Connection
+
 from src.formattr import formatTitle
-# import json
+
 
 # configs
 WALMART = {
@@ -25,24 +23,11 @@ WALMART = {
         'data-item-id': True
     },
     'title_indicator': 'span.lh-title',
-    # 'price_indicator': 'div.lh-copy',
     'price_indicator': {'data-automation-id': 'product-price'},
     'link_indicator': 'a',
     'rating_indicator': 'div.flex.items-center.mt2 span.w_iUH7',
     'img_indicator': 'div.relative.overflow-hidden img'
 }
-
-'''AMAZON = {
-    'site': 'amazon',
-    'url': 'https://www.amazon.com/s?k=',
-    'item_component': 'div',
-    'item_indicator': {
-        'data-component-type': 's-search-result'
-    },
-    'title_indicator': 'h2 a span',
-    'price_indicator': 'span.a-price span',
-    'link_indicator': 'h2 a.a-link-normal'
-}'''
 
 COSTCO = {
     'site': 'costco',
@@ -70,7 +55,6 @@ TARGET = {
         'data-item-id': True
     },
     'title_indicator': 'span.lh-title',
-    # 'price_indicator': 'div.lh-copy',
     'price_indicator': {'data-automation-id': 'product-price'},
     'link_indicator': 'a',
     'rating_indicator': 'div.flex.items-center.mt2 span.w_iUH7',
@@ -123,33 +107,6 @@ class scrape_target(Thread):
                     'link': data["search_results"][i]['product']["link"],
                     }
             items.append(item)
-        # data = requests.get(api_url, headers=headers).json()
-        # #
-        # items = []
-        # if data["data"]:
-        #     for p in data['data']['search']['products']:
-        #         item = {
-        #             'timestamp': datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
-        #             'title': formatTitle(p['item']['product_description']['title']),
-        #             'price': '$' + str(p['price']['reg_retail']),
-        #             'website': 'target',
-        #             # 'link': shorten_url(p['item']['enrichment']['buy_url'])
-        #             'link': p['item']['enrichment']['buy_url'],
-        #             'img_link': p['item']['enrichment']['images']['primary_image_url'],
-        #             # 'rating': p['ratings_and_reviews']['statistics']['rating']['average']
-        #         }
-        #         items.append(item)
-        #
-        # # set up the request parameters
-
-        # # make the http GET request to RedCircle API
-        # api_result = json.dumps(requests.get('https://api.redcircleapi.com/request', params).json())
-        #
-        # # print the JSON response from RedCircle API
-        # itemNums = len(api_result['search_results'])
-        # items = json.dumps(api_result.json())
-        # for i in range()
-        #     items["seasrch_results"]
 
         self.result = items
 
@@ -202,5 +159,4 @@ class scrape_ebay(Thread):
         self.result = items
 
 
-# CONFIGS = [WALMART, AMAZON, COSTCO, BESTBUY]
 CONFIGS = [WALMART, BESTBUY, TARGET]

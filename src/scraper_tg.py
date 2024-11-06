@@ -1,10 +1,10 @@
+import time
 from threading import Thread
+
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
-
-import time
 import undetected_chromedriver as uc
 
 
@@ -40,7 +40,6 @@ class search_target(Thread):
     def setup_driver(self):
         options = uc.ChromeOptions()
         # Remove '--headless' if you want to see the browser window
-        # options.add_argument('--headless')
         options.add_argument("--disable-gpu")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
