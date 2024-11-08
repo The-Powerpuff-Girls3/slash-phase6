@@ -6,14 +6,11 @@ name: Python application
 on:
   push:
     branches:
-      - main
-      - dev
       - test/workflow
   pull_request:
     branches:
       - main
       - dev
-      - test/workflow
 
 permissions:
   contents: read
