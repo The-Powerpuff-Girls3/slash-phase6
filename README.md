@@ -195,12 +195,33 @@ streamlit run slash_user_interface.py
 - Social Media Login and Sharing: We plan to allow users to log in using social media accounts (e.g., Google, Facebook) and share their wishlists or best deals directly with friends via social platforms.
 - Price Chart Visualization: We are going to introduce dynamic visualizations of price trends for products, allowing users to track price changes over time in a graphical format.
 
-:sparkles: Contributors
+:sparkles: Contributors && Contribution
 ---
 
 1. Sen Fang (sfang9@ncsu.edu)
+   - API refactoring for Walmart, Ebay, Target.
+   - New shopping platform supporting - Costco.
+   - Test wrting for Walmart, Ebay, and Costco.
+   - Demo video building.
+   - Form infilling.
+   - Regression testing.
+   - Real-world testing.
+   - Support workflow (minor).
 2. Weiyuan Ding (wding8@ncsu.edu)
+   - API refactoring for BestBuy.
+   - Test writing for BestBuy.
+   - Support cross-platforms testing.
+   - Feature testing.
+   - Support workflow (major).
+   - Code clean for format.
+   - Poster building.
+   - Form infilling.
+   - Regression testing.
+   - Real-world testing.
 3. Xiaoran Yang (xyang49@ncsu.edu)
+   - Test writing for Target.
+   - Documentation wrting.
+   - 2-mins video building.
 
 
 ## 🙏 Acknowledgements <a name="Acknowledgement"></a>
