@@ -9,6 +9,7 @@ import streamlit as st
 # chart module
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 
 sys.path.append('../')
 from src.main_streamlit import currency_API, search_items_API
@@ -174,6 +175,13 @@ def render_search():
             # Set Seaborn style
             sns.set(style="whitegrid", palette="muted", rc={"axes.spines.top": False, "axes.spines.right": False})
 
+            # Calculate statistics
+            mean_price = np.mean(price_values)
+            median_price = np.median(price_values)
+            std_dev = np.std(price_values)
+            min_price = np.min(price_values)
+            max_price = np.max(price_values)
+
             # Create figure and axis objects
             fig, ax = plt.subplots(figsize=(12, 7))
 
@@ -193,6 +201,15 @@ def render_search():
 
             # Improve x-axis formatting to avoid overlapping
             ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${x:,.0f}'))
+
+            # Add statistical indicators to the plot
+            ax.axvline(mean_price, color='red', linestyle='--', label=f'Mean: ${mean_price:,.2f}')
+            ax.axvline(median_price, color='green', linestyle='--', label=f'Median: ${median_price:,.2f}')
+            ax.axvline(min_price, color='purple', linestyle='-.', label=f'Min: ${min_price:,.2f}')
+            ax.axvline(max_price, color='orange', linestyle='-.', label=f'Max: ${max_price:,.2f}')
+
+            # Add legend to display the statistical indicators
+            ax.legend()
 
             # Show the plot in Streamlit
             st.pyplot(fig)
