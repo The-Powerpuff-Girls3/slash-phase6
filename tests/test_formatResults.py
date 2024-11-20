@@ -204,7 +204,9 @@ def test_formatResults_invalid_html_structure():
     product = formatter.formatResult("example", titles, prices, links, images)
     ans = {"title": "Invalid Title", "price": "", "website": "example"}
 
-    assert product["title"] == ans["title"] and product["price"] == ans["price"] and product["website"] == ans["website"]
+    assert product["title"] == ans["title"]
+    assert product["price"] == ans["price"]
+    assert product["website"] == ans["website"]
 
 
 def test_formatResults_multiple_prices():
@@ -219,7 +221,9 @@ def test_formatResults_multiple_prices():
     product = formatter.formatResult("example", titles, prices, links, images)
     ans = {"title": "title", "price": "$10.99", "website": "example"}
 
-    assert product["title"] == ans["title"] and product["price"] == ans["price"] and product["website"] == ans["website"]
+    assert product["title"] == ans["title"]
+    assert product["price"] == ans["price"]
+    assert product["website"] == ans["website"]
 
 
 def test_sortList_large_numbers():
@@ -229,8 +233,8 @@ def test_sortList_large_numbers():
     arr = [{"price": "$1000000"}, {"price": "$1000"}, {"price": "$500"}]
     ansArr = [{"price": "$500"}, {"price": "$1000"}, {"price": "$1000000"}]
     revAnsArr = [{"price": "$1000000"}, {"price": "$1000"}, {"price": "$500"}]
-    assert formatter.sortList(arr, "price", False) == ansArr
-    assert formatter.sortList(arr, "price", True) == revAnsArr
+    assert formatter.sortList(arr, "pr", False) == ansArr
+    assert formatter.sortList(arr, "pr", True) == revAnsArr
 
 
 def test_formatResults_with_special_characters():
