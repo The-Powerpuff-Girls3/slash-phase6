@@ -6,6 +6,10 @@ import requests
 import pandas as pd
 import streamlit as st
 
+# chart module
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 sys.path.append('../')
 from src.main_streamlit import currency_API, search_items_API
 from src.url_shortener import shorten_url
@@ -162,6 +166,16 @@ def render_search():
 
         else:
             st.error('Sorry, the website does not have similar products')
+        
+        # chart
+        if len(price):
+            price_values = [float(p.strip('$').replace(',', '')) for p in price] 
+            fig, ax = plt.subplots(figsize=(10, 6))
+            sns.histplot(price_values, kde=True, bins=10, ax=ax)  
+            ax.set_title(f"Price Distribution for '{product}' from {website}")
+            ax.set_xlabel("Price")
+            ax.set_ylabel("Frequency")
+            st.pyplot(fig)  
 
     if (button or st.session_state.button_clicked) and add:
         st.markdown("<h1 style='text-align: center; color: #1DC5A9;'>RESULT</h1>", unsafe_allow_html=True)
