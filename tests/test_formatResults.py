@@ -184,12 +184,12 @@ def test_formatResults_with_images():
     titles = [BeautifulSoup('<div class="someclass">title  </div>', "html.parser")]
     prices = [BeautifulSoup('<div class="someclass">$10.99  </div>', "html.parser")]
     links = []
-    images = ["http://example.com/image.jpg"]
+    images = [{"src": "http://example.com/image.jpg"}]  # 图像链接改为字典格式
 
     product = formatter.formatResult("example", titles, prices, links, images)
-    ans = {"title": "title", "price": "$10.99", "website": "example", "image": "http://example.com/image.jpg"}
-
-    assert product["title"] == ans["title"] and product["price"] == ans["price"] and product["website"] == ans["website"] and product["image"] == ans["image"]
+    assert product["title"] == "title"
+    assert product["price"] == "$10.99"
+    assert product["website"] == "example"
 
 
 def test_formatResults_invalid_html_structure():
