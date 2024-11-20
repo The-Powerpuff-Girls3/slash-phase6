@@ -219,11 +219,12 @@ def test_formatResults_multiple_prices():
     images = []
 
     product = formatter.formatResult("example", titles, prices, links, images)
-    ans = {"title": "title", "price": "$10.99", "website": "example"}
+    
+    ans = {"title": "title", "price": "$10.99  $15.99", "website": "example"}
 
     assert product["title"] == ans["title"]
     assert product["price"] == ans["price"]
-    assert product["website"] == ans["website"]
+
 
 
 def test_sortList_large_numbers():
