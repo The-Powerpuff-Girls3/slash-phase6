@@ -255,3 +255,45 @@ def test_sortList_descending_price():
     arr = [{"price": "$1000"}, {"price": "$500"}, {"price": "$1000000"}]
     ansArr = [{"price": "$1000000"}, {"price": "$1000"}, {"price": "$500"}]
     assert formatter.sortList(arr, "price", True) == ansArr
+
+def test_formatResults_with_multiple_images():
+    """
+    Test Case 18 Checks formatResults function when multiple image links are provided
+    """
+    titles = [BeautifulSoup('<div class="someclass">title  </div>', "html.parser")]
+    prices = [BeautifulSoup('<div class="someclass">$20.99  </div>', "html.parser")]
+    links = []
+    images = ["http://example.com/image1.jpg", "http://example.com/image2.jpg"]
+
+    product = formatter.formatResult("example", titles, prices, links, images)
+    ans = {"title": "title", "price": "$20.99", "website": "example", "image": "http://example.com/image1.jpg"}
+
+    assert product["title"] == ans["title"] and product["price"] == ans["price"] and product["website"] == ans["website"]
+    # Only the first image is expected to be included
+
+
+def test_sortList_case_insensitive_sorting():
+    """
+    Test Case 19 Checks the sortList function for case insensitive sorting of the price field
+    """
+    arr = [{"price": "$20"}, {"price": "$100"}, {"price": "$50"}]
+    ansArr = [{"price": "$20"}, {"price": "$50"}, {"price": "$100"}]  # Sorted in ascending order
+    revAnsArr = [{"price": "$100"}, {"price": "$50"}, {"price": "$20"}]  # Sorted in descending order
+
+    assert formatter.sortList(arr, "price", False) == ansArr
+    assert formatter.sortList(arr, "price", True) == revAnsArr
+
+
+def test_formatResults_missing_all_fields():
+    """
+    Test Case 20 Checks the formatResults function when all fields are missing or empty
+    """
+    titles = [BeautifulSoup('', "html.parser")]
+    prices = [BeautifulSoup('', "html.parser")]
+    links = []
+    images = []
+
+    product = formatter.formatResult("", titles, prices, links, images)
+    ans = {"title": "", "price": "", "website": ""}
+
+    assert product["title"] == ans["title"] and product["price"] == ans["price"] and product["website"] == ans["website"]
