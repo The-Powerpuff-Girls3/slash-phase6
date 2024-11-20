@@ -45,7 +45,7 @@ def test_formatResults():
 
 def test_sortList_empty():
     """
-    Checks the sortList function with an empty list
+    Test Case 1 Checks the sortList function with an empty list
     """
     arr = []
     ansArr = []
@@ -55,7 +55,7 @@ def test_sortList_empty():
 
 def test_sortList_no_prices():
     """
-    Checks the sortList function when 'price' field is missing in the dictionaries
+    Test Case 2 Checks the sortList function when 'price' field is missing in the dictionaries
     """
     arr = [{"name": "item1"}, {"name": "item2"}, {"name": "item3"}]
     ansArr = [{"name": "item1"}, {"name": "item2"}, {"name": "item3"}]  # No change since no price field
@@ -65,7 +65,7 @@ def test_sortList_no_prices():
 
 def test_sortList_single_item():
     """
-    Checks the sortList function with a single item in the list
+    Test Case 3 Checks the sortList function with a single item in the list
     """
     arr = [{"price": "$10"}]
     ansArr = [{"price": "$10"}]
@@ -75,7 +75,7 @@ def test_sortList_single_item():
 
 def test_sortList_non_numeric_price():
     """
-    Checks the sortList function when price is not numeric (e.g. invalid price format)
+    Test Case 4 Checks the sortList function when price is not numeric (e.g. invalid price format)
     """
     arr = [{"price": "$ten"}, {"price": "$20"}, {"price": "$0"}]
     ansArr = [{"price": "$0"}, {"price": "$20"}, {"price": "$ten"}]  # Invalid price stays at the end
@@ -84,7 +84,7 @@ def test_sortList_non_numeric_price():
 
 def test_formatResults_missing_title():
     """
-    Checks the formatResults function when title is missing
+    Test Case 5 Checks the formatResults function when title is missing
     """
     titles = [BeautifulSoup('<div class="someclass"></div>', "html.parser")]
     prices = [BeautifulSoup('<div class="someclass">$0.99  </div>', "html.parser")]
@@ -99,7 +99,7 @@ def test_formatResults_missing_title():
 
 def test_formatResults_missing_price():
     """
-    Checks the formatResults function when price is missing
+    Test Case 6 Checks the formatResults function when price is missing
     """
     titles = [BeautifulSoup('<div class="someclass">title  </div>', "html.parser")]
     prices = [BeautifulSoup('<div class="someclass"></div>', "html.parser")]
@@ -114,7 +114,7 @@ def test_formatResults_missing_price():
 
 def test_formatResults_missing_website():
     """
-    Checks the formatResults function when website is missing
+    Test Case 7 Checks the formatResults function when website is missing
     """
     titles = [BeautifulSoup('<div class="someclass">title  </div>', "html.parser")]
     prices = [BeautifulSoup('<div class="someclass">$0.99  </div>', "html.parser")]
@@ -129,7 +129,7 @@ def test_formatResults_missing_website():
 
 def test_sortList_invalid_sort_key():
     """
-    Checks sortList function with an invalid sorting key
+    Test Case 8 Checks sortList function with an invalid sorting key
     """
     arr = [{"price": "$10"}, {"price": "$20"}, {"price": "$0"}]
     ansArr = [{"price": "$10"}, {"price": "$20"}, {"price": "$0"}]  # No change as the key is invalid
@@ -138,7 +138,7 @@ def test_sortList_invalid_sort_key():
 
 def test_formatResults_empty_titles():
     """
-    Checks formatResults function with empty titles
+    Test Case 9 Checks formatResults function with empty titles
     """
     titles = [BeautifulSoup('', "html.parser")]
     prices = [BeautifulSoup('<div class="someclass">$10.99  </div>', "html.parser")]
@@ -153,7 +153,7 @@ def test_formatResults_empty_titles():
 
 def test_sortList_float_price():
     """
-    Checks sortList function with float prices
+    Test Case 10 Checks sortList function with float prices
     """
     arr = [{"price": "$10.5"}, {"price": "$20.25"}, {"price": "$0.99"}]
     ansArr = [{"price": "$0.99"}, {"price": "$10.5"}, {"price": "$20.25"}]
@@ -164,7 +164,7 @@ def test_sortList_float_price():
 
 def test_formatResults_with_links():
     """
-    Checks the formatResults function when links are provided
+    Test Case 11 Checks the formatResults function when links are provided
     """
     titles = [BeautifulSoup('<div class="someclass">title  </div>', "html.parser")]
     prices = [BeautifulSoup('<div class="someclass">$0.99  </div>', "html.parser")]
@@ -179,7 +179,7 @@ def test_formatResults_with_links():
 
 def test_formatResults_with_images():
     """
-    Checks the formatResults function when image links are provided
+    Test Case 12 Checks the formatResults function when image links are provided
     """
     titles = [BeautifulSoup('<div class="someclass">title  </div>', "html.parser")]
     prices = [BeautifulSoup('<div class="someclass">$10.99  </div>', "html.parser")]
@@ -194,7 +194,7 @@ def test_formatResults_with_images():
 
 def test_formatResults_invalid_html_structure():
     """
-    Checks formatResults function when the HTML structure is invalid or unexpected
+    Test Case 13 Checks formatResults function when the HTML structure is invalid or unexpected
     """
     titles = [BeautifulSoup('<div>Invalid Title', "html.parser")]
     prices = [BeautifulSoup('<span>No Price</span>', "html.parser")]
@@ -209,7 +209,7 @@ def test_formatResults_invalid_html_structure():
 
 def test_formatResults_multiple_prices():
     """
-    Checks formatResults function when multiple price values exist
+    Test Case 14 Checks formatResults function when multiple price values exist
     """
     titles = [BeautifulSoup('<div class="someclass">title  </div>', "html.parser")]
     prices = [BeautifulSoup('<div class="someclass">$10.99  </div><div class="someclass">$15.99</div>', "html.parser")]
@@ -224,7 +224,7 @@ def test_formatResults_multiple_prices():
 
 def test_sortList_large_numbers():
     """
-    Checks the sortList function with large numbers
+    Test Case 15 Checks the sortList function with large numbers
     """
     arr = [{"price": "$1000000"}, {"price": "$1000"}, {"price": "$500"}]
     ansArr = [{"price": "$500"}, {"price": "$1000"}, {"price": "$1000000"}]
@@ -235,7 +235,7 @@ def test_sortList_large_numbers():
 
 def test_formatResults_with_special_characters():
     """
-    Checks formatResults function when titles or prices contain special characters
+    Test Case 16 Checks formatResults function when titles or prices contain special characters
     """
     titles = [BeautifulSoup('<div class="someclass">!@#Title$%^</div>', "html.parser")]
     prices = [BeautifulSoup('<div class="someclass">$10.99  </div>', "html.parser")]
@@ -250,7 +250,7 @@ def test_formatResults_with_special_characters():
 
 def test_sortList_descending_price():
     """
-    Checks the sortList function to sort in descending order when price values are in descending order
+    Test Case 17 Checks the sortList function to sort in descending order when price values are in descending order
     """
     arr = [{"price": "$1000"}, {"price": "$500"}, {"price": "$1000000"}]
     ansArr = [{"price": "$1000000"}, {"price": "$1000"}, {"price": "$500"}]
