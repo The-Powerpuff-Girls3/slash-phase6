@@ -258,7 +258,7 @@ def test_sortList_descending_price():
     """
     arr = [{"price": "$1000"}, {"price": "$500"}, {"price": "$1000000"}]
     ansArr = [{"price": "$1000000"}, {"price": "$1000"}, {"price": "$500"}]
-    assert formatter.sortList(arr, "price", True) == ansArr
+    assert formatter.sortList(arr, "pr", True) == ansArr
 
 def test_formatResults_with_multiple_images():
     """
