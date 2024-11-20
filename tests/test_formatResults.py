@@ -284,8 +284,8 @@ def test_sortList_case_insensitive_sorting():
     ansArr = [{"price": "$20"}, {"price": "$50"}, {"price": "$100"}]  # Sorted in ascending order
     revAnsArr = [{"price": "$100"}, {"price": "$50"}, {"price": "$20"}]  # Sorted in descending order
 
-    assert formatter.sortList(arr, "price", False) == ansArr
-    assert formatter.sortList(arr, "price", True) == revAnsArr
+    assert formatter.sortList(arr, "pr", False) == ansArr
+    assert formatter.sortList(arr, "pr", True) == revAnsArr
 
 
 def test_formatResults_missing_all_fields():
