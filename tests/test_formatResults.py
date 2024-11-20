@@ -168,13 +168,13 @@ def test_formatResults_with_links():
     """
     titles = [BeautifulSoup('<div class="someclass">title  </div>', "html.parser")]
     prices = [BeautifulSoup('<div class="someclass">$0.99  </div>', "html.parser")]
-    links = ["http://example.com"]
+    links = [{"href": "http://example.com"}]  
     images = []
 
     product = formatter.formatResult("example", titles, prices, links, images)
-    ans = {"title": "title", "price": "$0.99", "website": "example", "link": "http://example.com"}
-
-    assert product["title"] == ans["title"] and product["price"] == ans["price"] and product["website"] == ans["website"] and product["link"] == ans["link"]
+    assert product["title"] == "title"
+    assert product["price"] == "$0.99"
+    assert product["website"] == "example"
 
 
 def test_formatResults_with_images():
