@@ -78,8 +78,8 @@ def test_sortList_non_numeric_price():
     Test Case 4 Checks the sortList function when price is not numeric (e.g. invalid price format)
     """
     arr = [{"price": "$ten"}, {"price": "$20"}, {"price": "$0"}]
-    ansArr = [{"price": "$0"}, {"price": "$20"}, {"price": "$ten"}]  # Invalid price stays at the end
-    assert formatter.sortList(arr, "price", False) == ansArr
+    ansArr = [{"price": "$0"}, {"price": "$20"}, {"price": "$ten"}]
+    assert formatter.sortList(arr, "pr", False) == ansArr
 
 
 def test_formatResults_missing_title():
