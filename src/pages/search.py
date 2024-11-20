@@ -169,13 +169,33 @@ def render_search():
         
         # chart
         if len(price):
-            price_values = [float(p.strip('$').replace(',', '')) for p in price] 
-            fig, ax = plt.subplots(figsize=(10, 6))
-            sns.histplot(price_values, kde=True, bins=10, ax=ax)  
-            ax.set_title(f"Price Distribution for '{product}' from {website}")
-            ax.set_xlabel("Price")
-            ax.set_ylabel("Frequency")
-            st.pyplot(fig)  
+            price_values = [float(p.strip('$').replace(',', '')) for p in price]
+
+            # Set Seaborn style
+            sns.set(style="whitegrid", palette="muted", rc={"axes.spines.top": False, "axes.spines.right": False})
+
+            # Create figure and axis objects
+            fig, ax = plt.subplots(figsize=(12, 7))
+
+            # Histogram + KDE plot
+            sns.histplot(price_values, kde=True, bins=15, ax=ax, color='skyblue', linewidth=2)
+
+            # Customize title, labels, and axis
+            ax.set_title(f"Price Distribution for '{product}' from {website}", fontsize=16, fontweight='bold')
+            ax.set_xlabel("Price", fontsize=14)
+            ax.set_ylabel("Frequency", fontsize=14)
+
+            # Optional: Add a grid for better visual alignment
+            ax.grid(True, linestyle='--', alpha=0.6)
+
+            # Customize ticks for better readability
+            ax.tick_params(axis='both', which='major', labelsize=12)
+
+            # Improve x-axis formatting to avoid overlapping
+            ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${x:,.0f}'))
+
+            # Show the plot in Streamlit
+            st.pyplot(fig)
 
     if (button or st.session_state.button_clicked) and add:
         st.markdown("<h1 style='text-align: center; color: #1DC5A9;'>RESULT</h1>", unsafe_allow_html=True)
