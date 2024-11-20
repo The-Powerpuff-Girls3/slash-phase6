@@ -158,8 +158,8 @@ def test_sortList_float_price():
     arr = [{"price": "$10.5"}, {"price": "$20.25"}, {"price": "$0.99"}]
     ansArr = [{"price": "$0.99"}, {"price": "$10.5"}, {"price": "$20.25"}]
     revAnsArr = [{"price": "$20.25"}, {"price": "$10.5"}, {"price": "$0.99"}]
-    assert formatter.sortList(arr, "price", False) == ansArr
-    assert formatter.sortList(arr, "price", True) == revAnsArr
+    assert formatter.sortList(arr, "pr", False) == ansArr
+    assert formatter.sortList(arr, "pr", True) == revAnsArr
 
 
 def test_formatResults_with_links():
