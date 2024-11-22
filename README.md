@@ -190,10 +190,10 @@ streamlit run slash_user_interface.py
    ### Key Features ✨:
    - **Price Distribution Visualization**: Displays a **histogram** with an overlaid **KDE** curve to understand how prices are distributed.
    - **Statistical Indicators**: Highlights key statistics such as:
-     - **Mean Price**: The average price 💵.
-     - **Median Price**: The middle value of the price data 📍.
-     - **Min/Max Prices**: The lowest and highest prices 🔥💰.
-     - **Standard Deviation**: A measure of price variability 📉.
+     - **Mean Price**: The average price
+     - **Median Price**: The middle value of the price data.
+     - **Min/Max Prices**: The lowest and highest prices.
+     - **Standard Deviation**: A measure of price variability.
    - **Interactive Plot**: The plot is rendered interactively, allowing users to easily analyze price trends.
    - **Customizable Aesthetics**: The visualization includes options to customize **labels**, **grid lines**, and **colors** for improved clarity and presentation.
    - **Market Analysis**: Compare prices across different sources or vendors.
