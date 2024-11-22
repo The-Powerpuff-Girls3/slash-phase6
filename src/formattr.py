@@ -33,6 +33,8 @@ def formatResult(website, titles, prices, links, img_link, rating):
         link = links[0]['href']
     if img_link:
         img_link = img_link[0]['src']
+    else:
+        img_link = ''
     product = {
         'timestamp': datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
         "title": formatTitle(title),
