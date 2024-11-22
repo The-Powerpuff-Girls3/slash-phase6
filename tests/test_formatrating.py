@@ -7,8 +7,7 @@ import inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
-import src.formattr as formatResult
-
+from src.formattr import formatResult  # 确保导入的是函数而不是模块
 
 def formatTitle(title):
     return title.strip()
