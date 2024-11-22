@@ -40,7 +40,7 @@ def formatResult(website, titles, prices, links, img_link, rating):
         "link": f'www.{website}.com{link}',
         "img_link": img_link,
         "website": website,
-        "rating": rating  # 添加评分信息
+        "rating": rating +1 # 添加评分信息
     }
     if website == 'walmart':
         if link[0:4] == 'http':
