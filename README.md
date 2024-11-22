@@ -187,6 +187,28 @@ streamlit run slash_user_interface.py
 <img src = https://github.com/DFY-NCSU/slash-phase6/blob/main/media/exp2.png>
 <img src = https://github.com/DFY-NCSU/slash-phase6/blob/main/media/exp3.png>
 
+5. ## Price Distribution Plot
+
+   This feature allows users to visualize the distribution of product prices. By analyzing a list of product prices, the tool generates a **histogram** and a **Kernel Density Estimation (KDE)** curve to showcase the frequency and spread of prices.
+
+   ### Key Features ✨:
+   - **Price Distribution Visualization**: Displays a **histogram** with an overlaid **KDE** curve to understand how prices are distributed.
+   - **Statistical Indicators**: Highlights key statistics such as:
+  - **Mean Price**: The average price 💵.
+  - **Median Price**: The middle value of the price data 📍.
+  - **Min/Max Prices**: The lowest and highest prices 🔥💰.
+  - **Standard Deviation**: A measure of price variability 📉.
+   - **Interactive Plot**: The plot is rendered interactively, allowing users to easily analyze price trends.
+   - **Customizable Aesthetics**: The visualization includes options to customize **labels**, **grid lines**, and **colors** for improved clarity and presentation.
+
+   This feature is ideal for:
+   - **Market Analysis**: Compare prices across different sources or vendors.
+   - **Pricing Strategy**: Help sellers set competitive prices.
+   - **Consumer Insights**: Enable consumers to visualize and assess price ranges across various platforms.
+
+   Gain insights into pricing trends and make data-driven decisions with this powerful visualization tool!
+
+
 :golf: Future Roadmap
 ---
 - Advanced Search Capabilities: We will enhance the current search functionality by adding more advanced filters such as product ratings, seller ratings, availability, and shipping time, giving users more refined control over search results, improving user satisfaction.
