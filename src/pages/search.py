@@ -11,7 +11,19 @@ from src.main_streamlit import currency_API, search_items_API
 from src.url_shortener import shorten_url
 
 def extract_rating(rating_str):
+    """
+    Extracts the rating value from a string.
     
+    Parameters
+    ----------
+    rating_str: str
+        The string containing the rating information.
+    
+    Returns
+    ----------
+    float
+        The extracted rating value as a float, or None if no rating value is found.
+    """
     match = re.search(r'(\d+(\.\d+)?)', rating_str)
     if match:
         return float(match.group(1))
