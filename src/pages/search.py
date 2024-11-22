@@ -6,6 +6,10 @@ import requests
 import pandas as pd
 import streamlit as st
 
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
 sys.path.append('../')
 from src.main_streamlit import currency_API, search_items_API
 from src.url_shortener import shorten_url
@@ -189,6 +193,51 @@ def render_search():
                 file_name='output.csv',
                 mime='text/csv',
             )
+
+
+            price_values = [float(p.strip('$').replace(',', '')) for p in price]
+
+            # Set Seaborn style
+            sns.set(style="whitegrid", palette="muted", rc={"axes.spines.top": False, "axes.spines.right": False})
+
+            # Calculate statistics
+            mean_price = np.mean(price_values)
+            median_price = np.median(price_values)
+            std_dev = np.std(price_values)
+            min_price = np.min(price_values)
+            max_price = np.max(price_values)
+
+            # Create figure and axis objects
+            fig, ax = plt.subplots(figsize=(12, 7))
+
+            # Histogram + KDE plot
+            sns.histplot(price_values, kde=True, bins=15, ax=ax, color='skyblue', linewidth=2)
+
+            # Customize title, labels, and axis
+            ax.set_title(f"Price Distribution for '{product}' from {website}", fontsize=16, fontweight='bold')
+            ax.set_xlabel("Price", fontsize=14)
+            ax.set_ylabel("Frequency", fontsize=14)
+
+            # Optional: Add a grid for better visual alignment
+            ax.grid(True, linestyle='--', alpha=0.6)
+
+            # Customize ticks for better readability
+            ax.tick_params(axis='both', which='major', labelsize=12)
+
+            # Improve x-axis formatting to avoid overlapping
+            ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${x:,.0f}'))
+
+            # Add statistical indicators to the plot
+            ax.axvline(mean_price, color='red', linestyle='--', label=f'Mean: ${mean_price:,.2f}')
+            ax.axvline(median_price, color='green', linestyle='--', label=f'Median: ${median_price:,.2f}')
+            ax.axvline(min_price, color='purple', linestyle='-.', label=f'Min: ${min_price:,.2f}')
+            ax.axvline(max_price, color='orange', linestyle='-.', label=f'Max: ${max_price:,.2f}')
+
+            # Add legend to display the statistical indicators
+            ax.legend()
+
+            # Show the plot in Streamlit
+            st.pyplot(fig)
 
         else:
             st.error('Sorry, the website does not have similar products')
