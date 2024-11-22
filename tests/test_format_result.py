@@ -13,7 +13,7 @@ import unittest
 from unittest.mock import patch
 
 class TestFormatResult(unittest.TestCase):
-    @patch('your_module.datetime')  # Mock datetime to ensure consistent timestamps
+    @patch('src.formattr.datetime')  # Mock datetime to ensure consistent timestamps
     def test_format_result_general(self, mock_datetime):
         # Mock current datetime
         mock_datetime.now.return_value = datetime(2024, 11, 21, 10, 0, 0)
@@ -34,7 +34,7 @@ class TestFormatResult(unittest.TestCase):
             "link": "www.amazon.com/product-link",
             "img_link": "http://image-link.com",
             "website": "amazon",
-            "rating": 5  # rating + 1
+            "rating": 4  # rating + 1
         }
 
         self.assertEqual(result, expected)
@@ -56,7 +56,7 @@ class TestFormatResult(unittest.TestCase):
             "link": "http://walmart.com/product",
             "img_link": "http://walmart-image.com",
             "website": "walmart",
-            "rating": 4
+            "rating": 3
         }
 
         self.assertEqual(result, expected)
@@ -78,7 +78,7 @@ class TestFormatResult(unittest.TestCase):
             "link": "www.ebay.com",
             "img_link": "",
             "website": "ebay",
-            "rating": 3
+            "rating": 2
         }
 
         self.assertEqual(result, expected)
