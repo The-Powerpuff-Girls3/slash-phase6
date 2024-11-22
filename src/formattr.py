@@ -15,7 +15,7 @@ the required format.
 """
 
 
-def formatResult(website, titles, prices, links, img_link):
+def formatResult(website, titles, prices, links, img_link, rating):
     """
     The formatResult function takes the scraped HTML as input, and extracts the
     necessary values from the HTML code. Ex. extracting a price '$19.99' from
@@ -28,11 +28,16 @@ def formatResult(website, titles, prices, links, img_link):
         if website == "walmart" or website == "ebay":
             price = prices
         else:
-            price = prices[0].get_text().strip()
+            if type(price) == str:
+                price = prices
+            else:
+                price = prices[0].get_text().strip()
     if links:
         link = links[0]['href']
     if img_link:
         img_link = img_link[0]['src']
+    else:
+        img_link = ''
     product = {
         'timestamp': datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
         "title": formatTitle(title),
@@ -40,6 +45,7 @@ def formatResult(website, titles, prices, links, img_link):
         "link": f'www.{website}.com{link}',
         "img_link": img_link,
         "website": website,
+        "rating": rating # rating information
     }
     if website == 'walmart':
         if link[0:4] == 'http':

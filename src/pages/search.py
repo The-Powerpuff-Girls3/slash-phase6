@@ -10,6 +10,24 @@ sys.path.append('../')
 from src.main_streamlit import currency_API, search_items_API
 from src.url_shortener import shorten_url
 
+def extract_rating(rating_str):
+    """
+    Extracts the rating value from a string.
+    
+    Parameters
+    ----------
+    rating_str: str
+        The string containing the rating information.
+    
+    Returns
+    ----------
+    float
+        The extracted rating value as a float, or None if no rating value is found.
+    """
+    match = re.search(r'(\d+(\.\d+)?)', rating_str)
+    if match:
+        return float(match.group(1))
+    return None
 
 def extract_and_format_numbers(input_string):
     # Use regular expressions to find all numbers in the input string
@@ -96,6 +114,12 @@ def render_search():
 
     with colu2:
         Min_price = st.number_input('Minimum price', min_value=0, value=0)
+        star_filter = st.selectbox(
+            'Filter by rating (stars)',
+            options=[">=0", ">=1", ">=2", ">=3", ">=4"], 
+            index=0,  # 默认选择第一个选项
+            help="Select the star ratings to filter products"
+        )
         button = st.button('Search', on_click=callback)
 
     with colu3:
@@ -127,13 +151,19 @@ def render_search():
 
             results.sort(key=lambda x: (float(x['price'])))
 
+            min_rating = float(star_filter.split('>=')[1])
+
             for result in results:
                 if result != {} and result['price'] != '' and float(result['price']) >= Min_price and float(result['price']) <= Max_price:
-                    description.append(result['title'])
-                    url.append(result['link'])
-                    site.append(result['website'])
-                    price.append(extract_and_format_numbers(result['price']))
-                    image_url.append(result['img_link'])
+                    if 'rating' in result and result['rating'] != '':
+                        rating = extract_rating(result['rating'])
+                        if rating >= min_rating:
+                            description.append(result['title'])
+                            url.append(result['link'])
+                            site.append(result['website'])
+                            price.append(extract_and_format_numbers(result['price']))
+                            image_url.append(result['img_link'])
+                    
 
         if len(price):
             if (currency != "USD($)"):
