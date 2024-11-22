@@ -86,8 +86,13 @@ class search(Thread):
                 price = price_parts.split()[-1]
                 link = res.select(self.config['link_indicator'])
                 img_link = res.select(self.config['img_indicator'])
+                
+                # Extract the rating
+                rating_tag = res.select_one(self.config['rating_indicator'])
+                rating = rating_tag.get_text(strip=True) if rating_tag else ''
 
-                product = form.formatResult(self.config['site'], title, price, link, img_link)
+
+                product = form.formatResult(self.config['site'], title, price, link, img_link, rating)
 
                 if product['title'] != '' and product['price'] != '' and product['link'] != '':
                     products.append(product)
