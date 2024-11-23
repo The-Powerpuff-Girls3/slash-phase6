@@ -1,6 +1,8 @@
 import streamlit as st
 from requests_oauthlib import OAuth2Session
 import os
+import urllib3
+from oauthlib.oauth2 import InsecureTransportError
 
 st.set_page_config(page_title="Slash - Product Search", page_icon="🔍")
 
@@ -17,20 +19,26 @@ authorization_base_url = 'https://accounts.google.com/o/oauth2/auth'
 token_url = 'https://oauth2.googleapis.com/token'
 redirect_uri = 'http://localhost:8501'
 
+# Disable SSL warnings for local development
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 def google_login():
     google = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=['openid', 'email', 'profile'])
     authorization_url, state = google.authorization_url(authorization_base_url, access_type="offline", prompt="select_account")
     st.write(f'<a href="{authorization_url}" target="_self">Login with Google</a>', unsafe_allow_html=True)
 
 def google_callback():
-    google = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=['openid', 'email', 'profile'])
-    token = google.fetch_token(token_url, client_secret=client_secret, authorization_response=st.experimental_get_query_params()['code'][0])
-    user_info = google.get('https://www.googleapis.com/oauth2/v1/userinfo').json()
-    st.session_state.token = token
-    st.session_state.user_info = user_info
-    st.experimental_rerun()
+    try:
+        google = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=['openid', 'email', 'profile'])
+        token = google.fetch_token(token_url, client_secret=client_secret, authorization_response=st.query_params['code'][0], verify=False)
+        user_info = google.get('https://www.googleapis.com/oauth2/v1/userinfo').json()
+        st.session_state.token = token
+        st.session_state.user_info = user_info
+        st.experimental_rerun()
+    except InsecureTransportError:
+        st.error("OAuth 2.0 requires HTTPS. Please use HTTPS in production.")
 
-if 'code' in st.experimental_get_query_params():
+if 'code' in st.query_params:
     google_callback()
 
 st.markdown("<span class='float-box'><h1 class='float'>Slash - Product Search</h1></span>", unsafe_allow_html=True)
