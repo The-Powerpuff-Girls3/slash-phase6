@@ -30,6 +30,7 @@ def google_login():
 def google_callback():
     try:
         google = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=['openid', 'email', 'profile'])
+        #google.session.verify = False  # Disable SSL verification for the entire session
         token = google.fetch_token(token_url, client_secret=client_secret, authorization_response=st.query_params['code'][0], verify=False)
         user_info = google.get('https://www.googleapis.com/oauth2/v1/userinfo').json()
         st.session_state.token = token
