@@ -142,6 +142,10 @@ python3 -m streamlit run slash_user_interface.py
 For Windows
 streamlit run slash_user_interface.py
 ```
+:lock: Google Login Feature
+---
+We have added a Google login feature in the slash_user_interface.py script. This allows users to log in using their Google accounts for a more seamless and secure authentication experience.
+
 
 :computer: Technology Used
 ---
@@ -240,6 +244,8 @@ streamlit run slash_user_interface.py
    - Test writing for Target.
    - Documentation wrting.
    - 2-mins video building.
+
+
 
 
 ## 🙏 Acknowledgements <a name="Acknowledgement"></a>
