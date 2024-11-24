@@ -221,29 +221,14 @@ We have added a Google login feature in the slash_user_interface.py script. This
 ---
 
 1. Sen Fang (sfang9@ncsu.edu)
-   - API refactoring for Walmart, Ebay, Target.
-   - New shopping platform supporting - Costco.
-   - Test wrting for Walmart, Ebay, and Costco.
-   - Demo video building.
-   - Form infilling.
-   - Regression testing.
-   - Real-world testing.
-   - Support workflow (minor).
 2. Weiyuan Ding (wding8@ncsu.edu)
-   - API refactoring for BestBuy.
-   - Test writing for BestBuy.
-   - Support cross-platforms testing.
-   - Feature testing.
-   - Support workflow (major).
-   - Code clean for format.
-   - Poster building.
-   - Form infilling.
-   - Regression testing.
-   - Real-world testing.
 3. Xiaoran Yang (xyang49@ncsu.edu)
-   - Test writing for Target.
-   - Documentation wrting.
-   - 2-mins video building.
+
+Building on the contributions of previous groups, this project has been expanded with the addition of three more talented teammates!
+
+1. Yinan Wu (ywu92@ncsu.edu)
+2. Xuntao Lyu (xlyu5@ncsu.edu)
+3. Hua Yang (hyang45@ncsu.edu)
 
 
 
