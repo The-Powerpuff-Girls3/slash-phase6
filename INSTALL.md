@@ -18,7 +18,7 @@ Ensure the following are installed on your machine:
 1. **Clone the Repository**
     
     ```bash
-    git clone <https://github.com/DFY-NCSU/slash-phase6.git>
+    git clone <https://github.com/The-Powerpuff-Girls3/slash-phase6.git>
     cd slash-phase6
     ```
     
