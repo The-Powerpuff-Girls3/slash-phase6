@@ -36,6 +36,8 @@ def google_callback():
         st.session_state.token = token
         st.session_state.user_info = user_info
         st.experimental_rerun()
+    except ValueError as e:
+        st.error(f"Failed to fetch token: {e}")
     except InsecureTransportError:
         st.error("OAuth 2.0 requires HTTPS. Please use HTTPS in production.")
 
