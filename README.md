@@ -183,11 +183,8 @@ streamlit run slash_user_interface.py
    - **Description**: The frontend has been redesigned to improve user experience with intuitive navigation, highlighted deals, and a clear wishlist display.
    - **Functionality**: Users enjoy a visually appealing interface with improved navigation, deal highlights, and an organized wishlist, making the application smoother and more enjoyable to use.
 
-5. ## Price Distribution Plot
+5. **Price Distribution Plot✨**
 
-   This feature allows users to visualize the distribution of product prices. By analyzing a list of product prices, the tool generates a **histogram** and a **Kernel Density Estimation (KDE)** curve to showcase the frequency and spread of prices.
-
-   ### Key Features ✨:
    - **Price Distribution Visualization**: Displays a **histogram** with an overlaid **KDE** curve to understand how prices are distributed.
    - **Statistical Indicators**: Highlights key statistics such as:
      - **Mean Price**: The average price
