@@ -30,20 +30,23 @@
 ``` -->
 
 
-Do you love shopping? Are you in search of some good deals while shopping online?! Slash is here to help you look for the best deals!
+# Slash: Your Ultimate Shopping Assistant
 
+Do you love shopping? Are you in search of great deals while shopping online?! Slash is here to help you find the best bargains effortlessly!
 
-<!-- Slash is a publicly accessible web API framework that allows one to scrape the most popular e-commerce websites to get the best deals on the searched items across multiple e-commerce websites. Currently supported websites include [Walmart](https://www.walmart.com/), [Target](https://www.target.com/), [BestBuy](https://www.bestbuy.com/), [Costco](https://www.costco.com), and [EBay](https://www.ebay.com/). -->
-Tired of searching multiple websites for the best deals? Slash is 
-here to make your online shopping experience smarter and faster! 
-Slash is a web API framework that automatically scrapes top 
-e-commerce sites—[Walmart](https://www.walmart.com/), [Target](https://www.target.com/), [BestBuy](https://www.bestbuy.com/), [Costco](https://www.costco.com), and [EBay](https://www.ebay.com/)—to 
-find and compare the best deals, saving you time and money. Whether 
-you're a student on a budget or a data analyst building real-time 
-datasets, Slash is the tool for you.
+Tired of visiting multiple websites to compare prices? **Slash** makes your online shopping experience smarter, faster, and more enjoyable!
+
+**Slash** is a powerful web API framework that scrapes top e-commerce sites—[Walmart](https://www.walmart.com/), [Target](https://www.target.com/), [BestBuy](https://www.bestbuy.com/), [Costco](https://www.costco.com), and [EBay](https://www.ebay.com/)—to find and compare the best deals for you. Whether you're a student on a budget or a data analyst building real-time datasets, **Slash** is your go-to tool.
+
+## Key Features:
+- **Google Login Integration**: Securely log in using your Google account for a personalized experience.
+- **Filter by Product Ratings**: Find items that match your expectations with our star-rating filter.
+- **Price Distribution Visualization**: View a detailed price distribution chart to make informed purchasing decisions.
 - **Fast**: Compare deals across platforms in seconds.
 - **Easy**: User-friendly APIs to filter, sort, and customize search results.
 - **Powerful**: Delivers tailored results in JSON format, perfect for seamless integration.
+
+Save time, money, and effort with **Slash**—your all-in-one shopping assistant!
 
 ---
 
