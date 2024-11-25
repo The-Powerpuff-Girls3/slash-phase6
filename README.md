@@ -19,26 +19,14 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/The-Powerpuff-Girls3/slash-phase7)
 ![GitHub repo size](https://img.shields.io/github/repo-size/The-Powerpuff-Girls3/slash-phase7)
 
-<!--Badges-->
-<a href="https://github.com/DFY-NCSU/slash-phase6/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/DFY-NCSU/slash-phase6"></a>
-<a href="https://github.com/DFY-NCSU/slash-phase6/forks"><img alt="GitHub forks" src="https://img.shields.io/github/forks/DFY-NCSU/slash-phase6"></a>
-<a href="https://github.com/DFY-NCSU/slash-phase6/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/DFY-NCSU/slash-phase6"></a>
-<a href="https://github.com/DFY-NCSU/slash-phase6/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/DFY-NCSU/slash-phase6"></a>
-<a href="https://github.com/DFY-NCSU/slash-phase6/issues?q=is%3Aissue+is%3Aclosed"><img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/DFY-NCSU/slash-phase6">
-<a href="https://github.com/DFY-NCSU/slash-phase6/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/DFY-NCSU/slash-phase6">
-<a href="https://github.com/DFY-NCSU/slash-phase6/pulls?q=is%3Apr+is%3Aclosed"><img alt="GitHub closed pull requests" src="https://img.shields.io/github/issues-pr-closed/DFY-NCSU/slash-phase6">
-<a href="https://github.com/DFY-NCSU/slash-phase6/discussions"><img alt="GitHub discussion channel" src="https://img.shields.io/github/discussions/DFY-NCSU/slash-phase6">
-
-
 <p align="center">
-    <a href="https://github.com/DFY-NCSU/slash-phase6/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
+    <a href="https://github.com/The-Powerpuff-Girls3/slash-phase7/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report a Bug</a>
     ·
-    <a href="https://github.com/DFY-NCSU/slash-phase6/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
+    <a href="https://github.com/The-Powerpuff-Girls3/slash-phase7/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request a Feature</a>
 </p>
 
 <!-- ```diff
-! All the latest changes in slash-phase5 are in "main" branch.
-! Score cards (Rubric) are in "Project 3" folder.
+! All the latest changes in slash-phase7 are in "main" branch.
 ``` -->
 
 
