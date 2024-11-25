@@ -145,7 +145,7 @@ streamlit run slash_user_interface.py
 :lock: Google Login Feature
 ---
 We have added a Google login feature in the slash_user_interface.py script. This allows users to log in using their Google accounts for a more seamless and secure authentication experience.
-
+<img src = https://github.com/The-Powerpuff-Girls3/slash-phase6/blob/main/media/login.png>
 
 :computer: Technology Used
 ---
