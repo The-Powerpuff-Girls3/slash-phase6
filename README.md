@@ -1,6 +1,6 @@
 <p align="center"><img width="500" src="assets/slash_new.png"></p>
 
-[![DOI](https://zenodo.org/badge/882147579.svg)](https://doi.org/10.5281/zenodo.14027393)
+[![DOI](https://zenodo.org/badge/891250312.svg)](https://doi.org/10.5281/zenodo.14213552)
 
 [![GitHub Release](https://img.shields.io/badge/release-v6.0.11.1-blue)](https://github.com/DFY-NCSU/slash-phase6)
 [![Flake8 Lint](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml)
