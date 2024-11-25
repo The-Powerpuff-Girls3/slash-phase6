@@ -11,7 +11,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/The-Powerpuff-Girls3/slash-phase7.svg)](https://github.com/The-Powerpuff-Girls3/slash-phase7/issues?q=is%3Aopen+is%3Aissue)
 [![GitHub issues-closed](https://img.shields.io/github/issues-closed/The-Powerpuff-Girls3/slash-phase7.svg)](https://github.com/The-Powerpuff-Girls3/slash-phase7/issues?q=is%3Aissue+is%3Aclosed)
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/879064540.svg)](https://doi.org/10.5281/zenodo.14010536)
 [![StyleCheck: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
 [![Security Check: Bandit](https://img.shields.io/badge/security-bandit-orange)](https://bandit.readthedocs.io/en/latest/)
 [![Code Formatter: black](https://img.shields.io/badge/formatter-black-black)](https://black.readthedocs.io/en/stable/)
