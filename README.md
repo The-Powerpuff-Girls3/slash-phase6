@@ -19,21 +19,6 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/The-Powerpuff-Girls3/slash-phase7)
 ![GitHub repo size](https://img.shields.io/github/repo-size/The-Powerpuff-Girls3/slash-phase7)
 
-
-<!-- <p align="center"><img width="500" src="assets/slash_new.png"></p> -->
-<!-- 
-[![DOI](https://zenodo.org/badge/882147579.svg)](https://doi.org/10.5281/zenodo.14027393)
-
-[![codecov](https://codecov.io/gh/SE23-Team44/slash-phase4/branch/main/graph/badge.svg?token=9YO9QKQZPJ)](https://codecov.io/gh/SE23-Team44/slash-phase4)
-[![GitHub Release](https://img.shields.io/badge/release-v6.0.11.1-blue)](https://github.com/DFY-NCSU/slash-phase6)
-[![Python Style Checker](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/style_checker.yml/badge.svg)](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/style_checker.yml)
-[![Run Tests On Push](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/unit_test.yml/badge.svg)](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/unit_test.yml)
-[![Python Application](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/python-app.yml/badge.svg)](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/python-app.yml)
-[![Lint Python](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/main.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/main.yml)
-[![Running Code Coverage](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/code_cov.yml/badge.svg)](https://github.com/MeryHarikaG/slash-phase5/actions/workflows/code_cov.yml)
-[![Close as a feature](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/close_as_a_feature.yml) -->
-
-
 <!--Badges-->
 <a href="https://github.com/DFY-NCSU/slash-phase6/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/DFY-NCSU/slash-phase6"></a>
 <a href="https://github.com/DFY-NCSU/slash-phase6/forks"><img alt="GitHub forks" src="https://img.shields.io/github/forks/DFY-NCSU/slash-phase6"></a>
