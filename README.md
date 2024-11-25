@@ -85,8 +85,8 @@ Save time, money, and effort with **Slash**—your all-in-one shopping assistant
 ---
 1. Clone the Github repository to a desired location on your computer. You will need [git](https://git-scm.com/) to be preinstalled on your machine. Once the repository is cloned, you will then ```cd``` into the local repository.
 ```
-git clone https://github.com/DFY-NCSU/slash-phase6.git
-cd slash-phase6
+git clone https://github.com/The-Powerpuff-Girls3/slash-phase7.git
+cd slash-phase7
 ```
 1. This project uses Python 3, so make sure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled. All requirements of the project are listed in the ```requirements.txt``` file. Use pip to install all of those.
 ```
@@ -128,10 +128,6 @@ python3 -m streamlit run slash_user_interface.py
 For Windows
 streamlit run slash_user_interface.py
 ```
-:lock: Google Login Feature
----
-We have added a Google login feature in the slash_user_interface.py script. This allows users to log in using their Google accounts for a more seamless and secure authentication experience.
-<img src = https://github.com/The-Powerpuff-Girls3/slash-phase6/blob/main/media/login.png>
 
 :computer: Technology Used
 ---
@@ -155,25 +151,19 @@ We have added a Google login feature in the slash_user_interface.py script. This
 - Slash in its current form is for students who wish to get the best deals out of every e-commerce site and can be used by anyone who is willing to develop an application that consumes these web APIs.
 - Future scope includes anything from a web application with a frontend or any Android or IOS application that utilises these Web APIs at their backend. Anyone can build their own custom application on top of these web APIs.
 
-:golf: Phase 6 developments
+:golf: Phase 7 developments
 ---
-1. **Expanded Platform Coverage with Costco Integration**
-   - **Description**: The project now supports Costco, in addition to previously integrated platforms like Walmart and Target, offering users a broader selection of products and prices.
-   - **Functionality**: Users can access pricing and product information from Costco alongside other platforms, ensuring a more comprehensive shopping experience.
+1. **Google Login Feature**
+---
+We have added a Google login feature in the slash_user_interface.py script. This allows users to log in using their Google accounts for a more seamless and secure authentication experience.
+<img src = https://github.com/The-Powerpuff-Girls3/slash-phase6/blob/main/media/login.png>
 
-2. **Improved Filtering and Sorting Capabilities**
-   - **Description**: Logical bugs in the sorting function have been corrected, and new filtering options allow users to easily narrow down searches by price.
-   - **Functionality**: Users can refine searches with advanced sorting and filtering features, enabling more precise price-based sorting and facilitating better deal discovery.
+2. **Advanced Search Capabilities**
+We have enhanced the search functionality by introducing advanced filters, including product ratings. The new option empowers users to refine their search results with precision, ensuring they find high-quality items that meet their preferences and needs.
 
-3. **Reliable and Refined Scraper Performance**
-   - **Description**: Bug fixes have been implemented to address previous issues with scrapers, ensuring consistent and accurate retrieval of price information.
-   - **Functionality**: Scrapers now reliably gather up-to-date pricing from multiple e-commerce sites, providing users with accurate and timely data.
+<img src = https://github.com/The-Powerpuff-Girls3/slash-phase7/blob/main/media/rating.png>
 
-4. **Advanced Price Sorting and Enhanced User Interface**
-   - **Description**: The frontend has been redesigned to improve user experience with intuitive navigation, highlighted deals, and a clear wishlist display.
-   - **Functionality**: Users enjoy a visually appealing interface with improved navigation, deal highlights, and an organized wishlist, making the application smoother and more enjoyable to use.
-
-5. **Price Distribution Plot✨**
+4. **Price Distribution Plot✨**
 
    - **Price Distribution Visualization**: Displays a **histogram** with an overlaid **KDE** curve to understand how prices are distributed.
    - **Statistical Indicators**: Highlights key statistics such as:
@@ -194,19 +184,14 @@ We have added a Google login feature in the slash_user_interface.py script. This
 
 :golf: Future Roadmap
 ---
-- Advanced Search Capabilities: We will enhance the current search functionality by adding more advanced filters such as product ratings, seller ratings, availability, and shipping time, giving users more refined control over search results, improving user satisfaction.
 - Predictive Price Model: We plan to implement a machine learning-based predictive model that advises users on the optimal time to make purchases, based on historical price trends and forecasting.
 - Pagination for Search Results: A pagination                  system to improve the display of search results,          particularly for large datasets is in progress.
-- Social Media Login and Sharing: We plan to allow users to log in using social media accounts (e.g., Google, Facebook) and share their wishlists or best deals directly with friends via social platforms.
-- Price Chart Visualization: We are going to introduce dynamic visualizations of price trends for products, allowing users to track price changes over time in a graphical format.
+- Voice Search Integration: Introduce voice-activated search functionality, allowing users to search for products using natural language voice commands for a more convenient shopping experience.
+- Wishlist Price Alerts: Implement a notification system to alert users when the prices of products in their wishlists drop below a certain threshold, helping them make timely purchases.
+- AI-Based Personal Shopping Assistant: Develop an AI-driven assistant that provides personalized product recommendations based on user preferences, browsing history, and current trends to enhance the shopping experience.
 
 :sparkles: Contributors && Contribution
 ---
-
-1. Sen Fang (sfang9@ncsu.edu)
-2. Weiyuan Ding (wding8@ncsu.edu)
-3. Xiaoran Yang (xyang49@ncsu.edu)
-
 Building on the contributions of previous groups, this project has been expanded with the addition of three more talented teammates!
 
 1. Yinan Wu (ywu92@ncsu.edu)
@@ -219,8 +204,16 @@ Building on the contributions of previous groups, this project has been expanded
 ## 🙏 Acknowledgements <a name="Acknowledgement"></a>
 <!-- We would like to thank Professor Dr Timothy Menzies for helping us understand the process of Maintaining a good Software Engineering project. We would also like to thank the teaching assistants for their support throughout the project. -->
 We would like to thank the teaching assistants for their support throughout the project.
-Some code in our project is modified from this [repo](https://github.com/MeryHarikaG/slash-phase5).
+Some code in our project is modified from this [repo](https://github.com/DFY-NCSU/slash-phase6).
 
 :email: Support
 ---
-For any queries and help, please reach out to us at: thefatblue@gmail.com
+For any queries and help, please reach out to us at: slash7support@googlegroups.com
+
+## Funding
+
+Not funded
+
+## Citation
+
+The Powerpuff Girls3. slash-phase7. Version 1.0.1, 2024, GitHub, https://github.com/The-Powerpuff-Girls3/slash-phase7
