@@ -14,7 +14,6 @@
 [![StyleCheck: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
 [![Security Check: Bandit](https://img.shields.io/badge/security-bandit-orange)](https://bandit.readthedocs.io/en/latest/)
 [![Code Formatter: black](https://img.shields.io/badge/formatter-black-black)](https://black.readthedocs.io/en/stable/)
-[![HitCount](https://hits.dwyl.com/The-Powerpuff-Girls3/slash-phase7.svg)](https://hits.dwyl.com/The-Powerpuff-Girls3/slash-phase7)
 ![GitHub contributors](https://img.shields.io/github/contributors/The-Powerpuff-Girls3/slash-phase7)
 ![GitHub repo size](https://img.shields.io/github/repo-size/The-Powerpuff-Girls3/slash-phase7)
 
