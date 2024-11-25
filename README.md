@@ -2,12 +2,30 @@
 
 [![DOI](https://zenodo.org/badge/891250312.svg)](https://doi.org/10.5281/zenodo.14213552)
 
-[![GitHub Release](https://img.shields.io/badge/release-v6.0.11.1-blue)](https://github.com/DFY-NCSU/slash-phase6)
-[![Flake8 Lint](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/flake8.yml)
-[![Syntax Check](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/syntax.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/syntax.yml)
-[![Python Style Checker](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/style.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/style.yml)
-[![Python Application](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/python-app.yml/badge.svg)](https://github.com/DFY-NCSU/slash-phase6/actions/workflows/python-app.yml)
-[![codecov](https://codecov.io/gh/DFY-NCSU/slash-phase6/branch/main/graph/badge.svg?token=oJrKEnEGwP)](https://codecov.io/gh/DFY-NCSU/slash-phase6/tree/main)
+[![GitHub Release](https://img.shields.io/badge/release-v1.0.1-blue)](https://github.com/The-Powerpuff-Girls3/slash-phase7)
+[![Flake8 Lint](https://github.com/The-Powerpuff-Girls3/slash-phase7/actions/workflows/flake8.yml/badge.svg)](https://github.com/The-Powerpuff-Girls3/slash-phase7/actions/workflows/flake8.yml)
+[![Syntax Check](https://github.com/The-Powerpuff-Girls3/slash-phase7/actions/workflows/syntax.yml/badge.svg)](https://github.com/The-Powerpuff-Girls3/slash-phase7/actions/workflows/syntax.yml)
+[![Python Style Checker](https://github.com/The-Powerpuff-Girls3/slash-phase7/actions/workflows/style.yml/badge.svg)](https://github.com/The-Powerpuff-Girls3/slash-phase7/actions/workflows/style.yml)
+[![Python Application](https://github.com/The-Powerpuff-Girls3/slash-phase7/actions/workflows/python-app.yml/badge.svg)](https://github.com/The-Powerpuff-Girls3/slash-phase7/actions/workflows/python-app.yml)
+[![codecov](https://codecov.io/gh/The-Powerpuff-Girls3/slash-phase7/branch/main/graph/badge.svg)](https://codecov.io/gh/The-Powerpuff-Girls3/slash-phase7/tree/main)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/The-Powerpuff-Girls3/slash-phase7/graphs/commit-activity)
+[![Contributors Activity](https://img.shields.io/github/commit-activity/m/The-Powerpuff-Girls3/slash-phase7)](https://github.com/The-Powerpuff-Girls3/slash-phase7/pulse)
+[![GitHub issues](https://img.shields.io/github/issues/The-Powerpuff-Girls3/slash-phase7.svg)](https://github.com/The-Powerpuff-Girls3/slash-phase7/issues?q=is%3Aopen+is%3Aissue)
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/The-Powerpuff-Girls3/slash-phase7.svg)](https://github.com/The-Powerpuff-Girls3/slash-phase7/issues?q=is%3Aissue+is%3Aclosed)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/The-Powerpuff-Girls3/slash-phase7)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/879064540.svg)](https://doi.org/10.5281/zenodo.14010536)
+[![Unittest](https://github.com/The-Powerpuff-Girls3/slash-phase7/actions/workflows/unittest.yml/badge.svg?branch=main&event=push)](https://github.com/The-Powerpuff-Girls3/slash-phase7/actions/workflows/unittest.yml)
+[![codecov](https://codecov.io/gh/The-Powerpuff-Girls3/slash-phase7/graph/badge.svg?token=SZWTDA4REW)](https://codecov.io/gh/The-Powerpuff-Girls3/slash-phase7)
+[![GitHub release](https://img.shields.io/github/release/The-Powerpuff-Girls3/slash-phase7.svg)](https://github.com/The-Powerpuff-Girls3/slash-phase7/releases/)
+[![StyleCheck: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
+[![Security Check: Bandit](https://img.shields.io/badge/security-bandit-orange)](https://bandit.readthedocs.io/en/latest/)
+[![Code Formatter: black](https://img.shields.io/badge/formatter-black-black)](https://black.readthedocs.io/en/stable/)
+[![HitCount](https://hits.dwyl.com/The-Powerpuff-Girls3/slash-phase7.svg)](https://hits.dwyl.com/The-Powerpuff-Girls3/slash-phase7)
+![GitHub contributors](https://img.shields.io/github/contributors/The-Powerpuff-Girls3/slash-phase7)
+![GitHub repo size](https://img.shields.io/github/repo-size/The-Powerpuff-Girls3/slash-phase7)
+
 
 
 <!-- <p align="center"><img width="500" src="assets/slash_new.png"></p> -->
