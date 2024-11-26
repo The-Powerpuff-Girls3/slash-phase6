@@ -71,10 +71,10 @@ Save time, money, and effort with **Slash**—your all-in-one shopping assistant
 
 ---
 
-:movie_camera: Checkout our video
+:movie_camera: Checkout our video list on Youtube channel!
 ---
 
-[bilibili](https://www.bilibili.com/video/BV1sZDJYYEuX)
+[Youtube](https://www.youtube.com/playlist?list=PLiz2sL3f73DiGDU6hztb0sxBvc7_Ic-MF)
 
 
 ---
